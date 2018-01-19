@@ -1,0 +1,6 @@
+C:\Users\jirwin\Desktop\Lynda\CSharp Essential Training\05_Flow\JanesSimpleCalculator\JanesSimpleCalculator\bin\Debug\JanesSimpleCalculator.exe.config
+C:\Users\jirwin\Desktop\Lynda\CSharp Essential Training\05_Flow\JanesSimpleCalculator\JanesSimpleCalculator\bin\Debug\JanesSimpleCalculator.exe
+C:\Users\jirwin\Desktop\Lynda\CSharp Essential Training\05_Flow\JanesSimpleCalculator\JanesSimpleCalculator\bin\Debug\JanesSimpleCalculator.pdb
+C:\Users\jirwin\Desktop\Lynda\CSharp Essential Training\05_Flow\JanesSimpleCalculator\JanesSimpleCalculator\obj\Debug\JanesSimpleCalculator.csprojResolveAssemblyReference.cache
+C:\Users\jirwin\Desktop\Lynda\CSharp Essential Training\05_Flow\JanesSimpleCalculator\JanesSimpleCalculator\obj\Debug\JanesSimpleCalculator.exe
+C:\Users\jirwin\Desktop\Lynda\CSharp Essential Training\05_Flow\JanesSimpleCalculator\JanesSimpleCalculator\obj\Debug\JanesSimpleCalculator.pdb
