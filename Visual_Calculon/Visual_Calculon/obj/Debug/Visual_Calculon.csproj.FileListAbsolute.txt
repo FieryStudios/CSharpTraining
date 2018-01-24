@@ -1,0 +1,14 @@
+C:\Users\jirwin\Desktop\Lynda\CSharp Essential Training\05_Flow\Visual_Calculon\Visual_Calculon\bin\Debug\Visual_Calculon.exe.config
+C:\Users\jirwin\Desktop\Lynda\CSharp Essential Training\05_Flow\Visual_Calculon\Visual_Calculon\bin\Debug\Visual_Calculon.exe
+C:\Users\jirwin\Desktop\Lynda\CSharp Essential Training\05_Flow\Visual_Calculon\Visual_Calculon\bin\Debug\Visual_Calculon.pdb
+C:\Users\jirwin\Desktop\Lynda\CSharp Essential Training\05_Flow\Visual_Calculon\Visual_Calculon\obj\Debug\Visual_Calculon.csprojResolveAssemblyReference.cache
+C:\Users\jirwin\Desktop\Lynda\CSharp Essential Training\05_Flow\Visual_Calculon\Visual_Calculon\obj\Debug\MainWindow.g.cs
+C:\Users\jirwin\Desktop\Lynda\CSharp Essential Training\05_Flow\Visual_Calculon\Visual_Calculon\obj\Debug\App.g.cs
+C:\Users\jirwin\Desktop\Lynda\CSharp Essential Training\05_Flow\Visual_Calculon\Visual_Calculon\obj\Debug\Visual_Calculon_MarkupCompile.cache
+C:\Users\jirwin\Desktop\Lynda\CSharp Essential Training\05_Flow\Visual_Calculon\Visual_Calculon\obj\Debug\Visual_Calculon_MarkupCompile.lref
+C:\Users\jirwin\Desktop\Lynda\CSharp Essential Training\05_Flow\Visual_Calculon\Visual_Calculon\obj\Debug\MainWindow.baml
+C:\Users\jirwin\Desktop\Lynda\CSharp Essential Training\05_Flow\Visual_Calculon\Visual_Calculon\obj\Debug\Visual_Calculon.g.resources
+C:\Users\jirwin\Desktop\Lynda\CSharp Essential Training\05_Flow\Visual_Calculon\Visual_Calculon\obj\Debug\Visual_Calculon.Properties.Resources.resources
+C:\Users\jirwin\Desktop\Lynda\CSharp Essential Training\05_Flow\Visual_Calculon\Visual_Calculon\obj\Debug\Visual_Calculon.csproj.GenerateResource.Cache
+C:\Users\jirwin\Desktop\Lynda\CSharp Essential Training\05_Flow\Visual_Calculon\Visual_Calculon\obj\Debug\Visual_Calculon.exe
+C:\Users\jirwin\Desktop\Lynda\CSharp Essential Training\05_Flow\Visual_Calculon\Visual_Calculon\obj\Debug\Visual_Calculon.pdb

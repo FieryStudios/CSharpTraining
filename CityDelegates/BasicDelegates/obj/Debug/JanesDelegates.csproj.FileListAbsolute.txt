@@ -1,0 +1,9 @@
+C:\Users\jirwin\Desktop\Lynda\CSharpDelegatesEventsLambdas\Delegates\JanesDelegates\BasicDelegates\bin\Debug\BasicDelegates.exe.config
+C:\Users\jirwin\Desktop\Lynda\CSharpDelegatesEventsLambdas\Delegates\JanesDelegates\BasicDelegates\bin\Debug\BasicDelegates.exe
+C:\Users\jirwin\Desktop\Lynda\CSharpDelegatesEventsLambdas\Delegates\JanesDelegates\BasicDelegates\bin\Debug\BasicDelegates.pdb
+C:\Users\jirwin\Desktop\Lynda\CSharpDelegatesEventsLambdas\Delegates\JanesDelegates\BasicDelegates\obj\Debug\JanesDelegates.csprojResolveAssemblyReference.cache
+C:\Users\jirwin\Desktop\Lynda\CSharpDelegatesEventsLambdas\Delegates\JanesDelegates\BasicDelegates\obj\Debug\BasicDelegates.exe
+C:\Users\jirwin\Desktop\Lynda\CSharpDelegatesEventsLambdas\Delegates\JanesDelegates\BasicDelegates\obj\Debug\BasicDelegates.pdb
+C:\Users\jirwin\Desktop\Lynda\CSharpDelegatesEventsLambdas\Delegates\JanesDelegatesRefactored\BasicDelegates\bin\Debug\BasicDelegates.exe.config
+C:\Users\jirwin\Desktop\Lynda\CSharpDelegatesEventsLambdas\Delegates\JanesDelegatesRefactored\BasicDelegates\obj\Debug\BasicDelegates.exe
+C:\Users\jirwin\Desktop\Lynda\CSharpDelegatesEventsLambdas\Delegates\JanesDelegatesRefactored\BasicDelegates\obj\Debug\BasicDelegates.pdb
