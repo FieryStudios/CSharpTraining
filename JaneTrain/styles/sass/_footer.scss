@@ -1,0 +1,20 @@
+/* footer */
+
+footer{
+  @extend %exterior;
+  background:$darkGrey;
+  color: white;
+  margin-top:$fullSpacer;
+  overflow:auto;
+  padding: $halfSpacer 0;
+  z-index:1;
+
+  @include media-query(mobile){
+    margin-top:$halfSpacer;
+  }
+
+  a{
+    color:white;
+  }
+
+}

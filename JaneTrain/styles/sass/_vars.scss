@@ -1,0 +1,45 @@
+
+/*------------------------------------*\
+    COLORS
+\*------------------------------------*/
+
+$darkGrey: #262729;
+$lightGrey:#f4f4f4;
+
+$teal: #34d9c3;
+$blue: #4c56a6;
+$darkBlue: #000a8b;
+
+/*------------------------------------*\
+    PATHING VARS
+\*------------------------------------*/
+$imgPath: "../../img/";
+
+/*------------------------------------*\
+    WIDTH VARS
+\*------------------------------------*/
+$interiorWidthMax: 1440px;
+$exteriorWidthMax: 1920px;
+
+$interiorTabletWidthMax: 900px;
+$exteriorWidthMax: 1920px;
+
+$fullSpacer: 60px;
+$halfSpacer: 30px;
+$thirdSpacer: 20px;
+
+
+/*------------------------------------*\
+    MEDIA QUERIES
+    if changing these width values,
+    please also update the matching
+    LC.Widths variables in the
+    jt.js file.
+\*------------------------------------*/
+
+$mobile-start:         320px;  /* mobile breakpoint*/
+$tablet-start:		601px;  /* tablet breakpoint */
+$desk-start:        1200px;  /* desktop breakpoint */
+
+$mobile-end: $tablet-start - 1px;
+$tablet-end: $desk-start - 1px;

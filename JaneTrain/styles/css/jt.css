@@ -1,0 +1,3329 @@
+@charset "UTF-8";
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  box-sizing: border-box;
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  box-sizing: border-box;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/* Sitewide defaults
+   ========================================================================== */
+div, span, a, h1, h2, h3, h4, h5, h6, header, footer, nav, section, ul, ol, img, p {
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+input[type=text], input[type=email], input[type=tel], input[type=submit] {
+  border: 0;
+  border-radius: 0;
+  line-height: 1;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-appearance: none;
+}
+
+select {
+  border: 0;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  line-height: 1;
+}
+
+/*------------------------------------*    COLORS
+\*------------------------------------*/
+/*------------------------------------*    PATHING VARS
+\*------------------------------------*/
+/*------------------------------------*    WIDTH VARS
+\*------------------------------------*/
+/*------------------------------------*    MEDIA QUERIES
+    if changing these width values,
+    please also update the matching
+    LC.Widths variables in the
+    jt.js file.
+\*------------------------------------*/
+/* mobile breakpoint*/
+/* tablet breakpoint */
+/* desktop breakpoint */
+.grid {
+  margin-left: -10px;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+/**
+ * Very infrequently occuring grid wrappers as children of grid wrappers.
+ */
+.grid > .grid {
+  margin-left: 0;
+}
+
+/**
+ * Grid
+ */
+.grid__item {
+  display: inline-block;
+  width: 100%;
+  padding-left: 10px;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+/*------------------------------------*    $WIDTHS
+\*------------------------------------*/
+/**
+ * Sizes in human readable format. These are used in conjunction with other
+ * objects and abstractions found in inuit.css, most commonly the grid system
+ * and faux flexbox.
+ *
+ * We have a mixin to generate our widths and their breakpoint-specific
+ * variations.
+ */
+/**
+    * Whole
+    */
+.one-whole {
+  width: 100%;
+}
+
+/**
+    * Halves
+    */
+.one-half {
+  width: 50%;
+}
+
+/**
+    * Thirds
+    */
+.one-third {
+  width: 33.333%;
+}
+
+.two-thirds {
+  width: 66.666%;
+}
+
+/**
+    * Quarters
+    */
+.one-quarter {
+  width: 25%;
+}
+
+.two-quarters {
+  width: 50%;
+}
+
+.three-quarters {
+  width: 75%;
+}
+
+/**
+    * Fifths
+    */
+.one-fifth {
+  width: 20%;
+}
+
+.two-fifths {
+  width: 40%;
+}
+
+.three-fifths {
+  width: 60%;
+}
+
+.four-fifths {
+  width: 80%;
+}
+
+/**
+    * Sixths
+    */
+.one-sixth {
+  width: 16.666%;
+}
+
+.two-sixths {
+  width: 33.333%;
+}
+
+.three-sixths {
+  width: 50%;
+}
+
+.four-sixths {
+  width: 66.666%;
+}
+
+.five-sixths {
+  width: 83.333%;
+}
+
+/**
+   * Sevenths
+   */
+.one-seventh {
+  width: 14.26%;
+}
+
+.two-sevenths {
+  width: 28.56%;
+}
+
+.three-sevenths {
+  width: 42.86%;
+}
+
+.four-sevenths {
+  width: 57.14%;
+}
+
+.five-sevenths {
+  width: 71.42%;
+}
+
+.six-sevenths {
+  width: 85.71%;
+}
+
+/**
+    * Eighths
+    */
+.one-eighth {
+  width: 12.5%;
+}
+
+.two-eighths {
+  width: 25%;
+}
+
+.three-eighths {
+  width: 37.5%;
+}
+
+.four-eighths {
+  width: 50%;
+}
+
+.five-eighths {
+  width: 62.5%;
+}
+
+.six-eighths {
+  width: 75%;
+}
+
+.seven-eighths {
+  width: 87.5%;
+}
+
+/**
+    * Ninths
+    */
+.one-ninth {
+  width: 11.111%;
+}
+
+.two-ninths {
+  width: 22.222%;
+}
+
+.three-ninths {
+  width: 33.333%;
+}
+
+.four-ninths {
+  width: 44.444%;
+}
+
+.five-ninths {
+  width: 55.555%;
+}
+
+.six-ninths {
+  width: 66.666%;
+}
+
+.seven-ninths {
+  width: 77.777%;
+}
+
+.eight-ninths {
+  width: 88.888%;
+}
+
+/**
+    * Tenths
+    */
+.one-tenth {
+  width: 10%;
+}
+
+.two-tenths {
+  width: 20%;
+}
+
+.three-tenths {
+  width: 30%;
+}
+
+.four-tenths {
+  width: 40%;
+}
+
+.five-tenths {
+  width: 50%;
+}
+
+.six-tenths {
+  width: 60%;
+}
+
+.seven-tenths {
+  width: 70%;
+}
+
+.eight-tenths {
+  width: 80%;
+}
+
+.nine-tenths {
+  width: 90%;
+}
+
+/**
+    * Twelfths
+    */
+.one-twelfth {
+  width: 8.333%;
+}
+
+.two-twelfths {
+  width: 16.666%;
+}
+
+.three-twelfths {
+  width: 25%;
+}
+
+.four-twelfths {
+  width: 33.333%;
+}
+
+.five-twelfths {
+  width: 41.666%;
+}
+
+.six-twelfths {
+  width: 50%;
+}
+
+.seven-twelfths {
+  width: 58.333%;
+}
+
+.eight-twelfths {
+  width: 66.666%;
+}
+
+.nine-twelfths {
+  width: 75%;
+}
+
+.ten-twelfths {
+  width: 83.333%;
+}
+
+.eleven-twelfths {
+  width: 91.666%;
+}
+
+.zero {
+  display: none;
+  padding-left: 0;
+  right: 0;
+}
+
+/**
+ * You can define at which breakpoint you’d like an
+ * element to be a certain size, e.g.:
+ *
+ * `<div class="g  one-quarter  tablet-one-half  mobile-one-whole"> ... </div>`
+ *
+ * This would create a `div` that, at ‘desk’ sizes, takes up a quarter of the
+ * horizontal space, a half of that space at ‘tablet’ sizes, and goes full width
+ * at ‘mobile’ sizes.
+ *
+ * Demo: jsfiddle.net/inuitcss/WS4Ge
+ *
+ */
+@media only screen and (max-width: 600px) {
+  /**
+    * Whole
+    */
+  .mobile-one-whole {
+    width: 100%;
+  }
+  /**
+    * Halves
+    */
+  .mobile-one-half {
+    width: 50%;
+  }
+  /**
+    * Thirds
+    */
+  .mobile-one-third {
+    width: 33.333%;
+  }
+  .mobile-two-thirds {
+    width: 66.666%;
+  }
+  /**
+    * Quarters
+    */
+  .mobile-one-quarter {
+    width: 25%;
+  }
+  .mobile-two-quarters {
+    width: 50%;
+  }
+  .mobile-three-quarters {
+    width: 75%;
+  }
+  /**
+    * Fifths
+    */
+  .mobile-one-fifth {
+    width: 20%;
+  }
+  .mobile-two-fifths {
+    width: 40%;
+  }
+  .mobile-three-fifths {
+    width: 60%;
+  }
+  .mobile-four-fifths {
+    width: 80%;
+  }
+  /**
+    * Sixths
+    */
+  .mobile-one-sixth {
+    width: 16.666%;
+  }
+  .mobile-two-sixths {
+    width: 33.333%;
+  }
+  .mobile-three-sixths {
+    width: 50%;
+  }
+  .mobile-four-sixths {
+    width: 66.666%;
+  }
+  .mobile-five-sixths {
+    width: 83.333%;
+  }
+  /**
+   * Sevenths
+   */
+  .mobile-one-seventh {
+    width: 14.26%;
+  }
+  .mobile-two-sevenths {
+    width: 28.56%;
+  }
+  .mobile-three-sevenths {
+    width: 42.86%;
+  }
+  .mobile-four-sevenths {
+    width: 57.14%;
+  }
+  .mobile-five-sevenths {
+    width: 71.42%;
+  }
+  .mobile-six-sevenths {
+    width: 85.71%;
+  }
+  /**
+    * Eighths
+    */
+  .mobile-one-eighth {
+    width: 12.5%;
+  }
+  .mobile-two-eighths {
+    width: 25%;
+  }
+  .mobile-three-eighths {
+    width: 37.5%;
+  }
+  .mobile-four-eighths {
+    width: 50%;
+  }
+  .mobile-five-eighths {
+    width: 62.5%;
+  }
+  .mobile-six-eighths {
+    width: 75%;
+  }
+  .mobile-seven-eighths {
+    width: 87.5%;
+  }
+  /**
+    * Ninths
+    */
+  .mobile-one-ninth {
+    width: 11.111%;
+  }
+  .mobile-two-ninths {
+    width: 22.222%;
+  }
+  .mobile-three-ninths {
+    width: 33.333%;
+  }
+  .mobile-four-ninths {
+    width: 44.444%;
+  }
+  .mobile-five-ninths {
+    width: 55.555%;
+  }
+  .mobile-six-ninths {
+    width: 66.666%;
+  }
+  .mobile-seven-ninths {
+    width: 77.777%;
+  }
+  .mobile-eight-ninths {
+    width: 88.888%;
+  }
+  /**
+    * Tenths
+    */
+  .mobile-one-tenth {
+    width: 10%;
+  }
+  .mobile-two-tenths {
+    width: 20%;
+  }
+  .mobile-three-tenths {
+    width: 30%;
+  }
+  .mobile-four-tenths {
+    width: 40%;
+  }
+  .mobile-five-tenths {
+    width: 50%;
+  }
+  .mobile-six-tenths {
+    width: 60%;
+  }
+  .mobile-seven-tenths {
+    width: 70%;
+  }
+  .mobile-eight-tenths {
+    width: 80%;
+  }
+  .mobile-nine-tenths {
+    width: 90%;
+  }
+  /**
+    * Twelfths
+    */
+  .mobile-one-twelfth {
+    width: 8.333%;
+  }
+  .mobile-two-twelfths {
+    width: 16.666%;
+  }
+  .mobile-three-twelfths {
+    width: 25%;
+  }
+  .mobile-four-twelfths {
+    width: 33.333%;
+  }
+  .mobile-five-twelfths {
+    width: 41.666%;
+  }
+  .mobile-six-twelfths {
+    width: 50%;
+  }
+  .mobile-seven-twelfths {
+    width: 58.333%;
+  }
+  .mobile-eight-twelfths {
+    width: 66.666%;
+  }
+  .mobile-nine-twelfths {
+    width: 75%;
+  }
+  .mobile-ten-twelfths {
+    width: 83.333%;
+  }
+  .mobile-eleven-twelfths {
+    width: 91.666%;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1199px) {
+  /**
+    * Whole
+    */
+  .tablet-one-whole {
+    width: 100%;
+  }
+  /**
+    * Halves
+    */
+  .tablet-one-half {
+    width: 50%;
+  }
+  /**
+    * Thirds
+    */
+  .tablet-one-third {
+    width: 33.333%;
+  }
+  .tablet-two-thirds {
+    width: 66.666%;
+  }
+  /**
+    * Quarters
+    */
+  .tablet-one-quarter {
+    width: 25%;
+  }
+  .tablet-two-quarters {
+    width: 50%;
+  }
+  .tablet-three-quarters {
+    width: 75%;
+  }
+  /**
+    * Fifths
+    */
+  .tablet-one-fifth {
+    width: 20%;
+  }
+  .tablet-two-fifths {
+    width: 40%;
+  }
+  .tablet-three-fifths {
+    width: 60%;
+  }
+  .tablet-four-fifths {
+    width: 80%;
+  }
+  /**
+    * Sixths
+    */
+  .tablet-one-sixth {
+    width: 16.666%;
+  }
+  .tablet-two-sixths {
+    width: 33.333%;
+  }
+  .tablet-three-sixths {
+    width: 50%;
+  }
+  .tablet-four-sixths {
+    width: 66.666%;
+  }
+  .tablet-five-sixths {
+    width: 83.333%;
+  }
+  /**
+   * Sevenths
+   */
+  .tablet-one-seventh {
+    width: 14.26%;
+  }
+  .tablet-two-sevenths {
+    width: 28.56%;
+  }
+  .tablet-three-sevenths {
+    width: 42.86%;
+  }
+  .tablet-four-sevenths {
+    width: 57.14%;
+  }
+  .tablet-five-sevenths {
+    width: 71.42%;
+  }
+  .tablet-six-sevenths {
+    width: 85.71%;
+  }
+  /**
+    * Eighths
+    */
+  .tablet-one-eighth {
+    width: 12.5%;
+  }
+  .tablet-two-eighths {
+    width: 25%;
+  }
+  .tablet-three-eighths {
+    width: 37.5%;
+  }
+  .tablet-four-eighths {
+    width: 50%;
+  }
+  .tablet-five-eighths {
+    width: 62.5%;
+  }
+  .tablet-six-eighths {
+    width: 75%;
+  }
+  .tablet-seven-eighths {
+    width: 87.5%;
+  }
+  /**
+    * Ninths
+    */
+  .tablet-one-ninth {
+    width: 11.111%;
+  }
+  .tablet-two-ninths {
+    width: 22.222%;
+  }
+  .tablet-three-ninths {
+    width: 33.333%;
+  }
+  .tablet-four-ninths {
+    width: 44.444%;
+  }
+  .tablet-five-ninths {
+    width: 55.555%;
+  }
+  .tablet-six-ninths {
+    width: 66.666%;
+  }
+  .tablet-seven-ninths {
+    width: 77.777%;
+  }
+  .tablet-eight-ninths {
+    width: 88.888%;
+  }
+  /**
+    * Tenths
+    */
+  .tablet-one-tenth {
+    width: 10%;
+  }
+  .tablet-two-tenths {
+    width: 20%;
+  }
+  .tablet-three-tenths {
+    width: 30%;
+  }
+  .tablet-four-tenths {
+    width: 40%;
+  }
+  .tablet-five-tenths {
+    width: 50%;
+  }
+  .tablet-six-tenths {
+    width: 60%;
+  }
+  .tablet-seven-tenths {
+    width: 70%;
+  }
+  .tablet-eight-tenths {
+    width: 80%;
+  }
+  .tablet-nine-tenths {
+    width: 90%;
+  }
+  /**
+    * Twelfths
+    */
+  .tablet-one-twelfth {
+    width: 8.333%;
+  }
+  .tablet-two-twelfths {
+    width: 16.666%;
+  }
+  .tablet-three-twelfths {
+    width: 25%;
+  }
+  .tablet-four-twelfths {
+    width: 33.333%;
+  }
+  .tablet-five-twelfths {
+    width: 41.666%;
+  }
+  .tablet-six-twelfths {
+    width: 50%;
+  }
+  .tablet-seven-twelfths {
+    width: 58.333%;
+  }
+  .tablet-eight-twelfths {
+    width: 66.666%;
+  }
+  .tablet-nine-twelfths {
+    width: 75%;
+  }
+  .tablet-ten-twelfths {
+    width: 83.333%;
+  }
+  .tablet-eleven-twelfths {
+    width: 91.666%;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  /**
+    * Whole
+    */
+  .tablet-and-up-one-whole {
+    width: 100%;
+  }
+  /**
+    * Halves
+    */
+  .tablet-and-up-one-half {
+    width: 50%;
+  }
+  /**
+    * Thirds
+    */
+  .tablet-and-up-one-third {
+    width: 33.333%;
+  }
+  .tablet-and-up-two-thirds {
+    width: 66.666%;
+  }
+  /**
+    * Quarters
+    */
+  .tablet-and-up-one-quarter {
+    width: 25%;
+  }
+  .tablet-and-up-two-quarters {
+    width: 50%;
+  }
+  .tablet-and-up-three-quarters {
+    width: 75%;
+  }
+  /**
+    * Fifths
+    */
+  .tablet-and-up-one-fifth {
+    width: 20%;
+  }
+  .tablet-and-up-two-fifths {
+    width: 40%;
+  }
+  .tablet-and-up-three-fifths {
+    width: 60%;
+  }
+  .tablet-and-up-four-fifths {
+    width: 80%;
+  }
+  /**
+    * Sixths
+    */
+  .tablet-and-up-one-sixth {
+    width: 16.666%;
+  }
+  .tablet-and-up-two-sixths {
+    width: 33.333%;
+  }
+  .tablet-and-up-three-sixths {
+    width: 50%;
+  }
+  .tablet-and-up-four-sixths {
+    width: 66.666%;
+  }
+  .tablet-and-up-five-sixths {
+    width: 83.333%;
+  }
+  /**
+   * Sevenths
+   */
+  .tablet-and-up-one-seventh {
+    width: 14.26%;
+  }
+  .tablet-and-up-two-sevenths {
+    width: 28.56%;
+  }
+  .tablet-and-up-three-sevenths {
+    width: 42.86%;
+  }
+  .tablet-and-up-four-sevenths {
+    width: 57.14%;
+  }
+  .tablet-and-up-five-sevenths {
+    width: 71.42%;
+  }
+  .tablet-and-up-six-sevenths {
+    width: 85.71%;
+  }
+  /**
+    * Eighths
+    */
+  .tablet-and-up-one-eighth {
+    width: 12.5%;
+  }
+  .tablet-and-up-two-eighths {
+    width: 25%;
+  }
+  .tablet-and-up-three-eighths {
+    width: 37.5%;
+  }
+  .tablet-and-up-four-eighths {
+    width: 50%;
+  }
+  .tablet-and-up-five-eighths {
+    width: 62.5%;
+  }
+  .tablet-and-up-six-eighths {
+    width: 75%;
+  }
+  .tablet-and-up-seven-eighths {
+    width: 87.5%;
+  }
+  /**
+    * Ninths
+    */
+  .tablet-and-up-one-ninth {
+    width: 11.111%;
+  }
+  .tablet-and-up-two-ninths {
+    width: 22.222%;
+  }
+  .tablet-and-up-three-ninths {
+    width: 33.333%;
+  }
+  .tablet-and-up-four-ninths {
+    width: 44.444%;
+  }
+  .tablet-and-up-five-ninths {
+    width: 55.555%;
+  }
+  .tablet-and-up-six-ninths {
+    width: 66.666%;
+  }
+  .tablet-and-up-seven-ninths {
+    width: 77.777%;
+  }
+  .tablet-and-up-eight-ninths {
+    width: 88.888%;
+  }
+  /**
+    * Tenths
+    */
+  .tablet-and-up-one-tenth {
+    width: 10%;
+  }
+  .tablet-and-up-two-tenths {
+    width: 20%;
+  }
+  .tablet-and-up-three-tenths {
+    width: 30%;
+  }
+  .tablet-and-up-four-tenths {
+    width: 40%;
+  }
+  .tablet-and-up-five-tenths {
+    width: 50%;
+  }
+  .tablet-and-up-six-tenths {
+    width: 60%;
+  }
+  .tablet-and-up-seven-tenths {
+    width: 70%;
+  }
+  .tablet-and-up-eight-tenths {
+    width: 80%;
+  }
+  .tablet-and-up-nine-tenths {
+    width: 90%;
+  }
+  /**
+    * Twelfths
+    */
+  .tablet-and-up-one-twelfth {
+    width: 8.333%;
+  }
+  .tablet-and-up-two-twelfths {
+    width: 16.666%;
+  }
+  .tablet-and-up-three-twelfths {
+    width: 25%;
+  }
+  .tablet-and-up-four-twelfths {
+    width: 33.333%;
+  }
+  .tablet-and-up-five-twelfths {
+    width: 41.666%;
+  }
+  .tablet-and-up-six-twelfths {
+    width: 50%;
+  }
+  .tablet-and-up-seven-twelfths {
+    width: 58.333%;
+  }
+  .tablet-and-up-eight-twelfths {
+    width: 66.666%;
+  }
+  .tablet-and-up-nine-twelfths {
+    width: 75%;
+  }
+  .tablet-and-up-ten-twelfths {
+    width: 83.333%;
+  }
+  .tablet-and-up-eleven-twelfths {
+    width: 91.666%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  /**
+    * Whole
+    */
+  .desk-one-whole {
+    width: 100%;
+  }
+  /**
+    * Halves
+    */
+  .desk-one-half {
+    width: 50%;
+  }
+  /**
+    * Thirds
+    */
+  .desk-one-third {
+    width: 33.333%;
+  }
+  .desk-two-thirds {
+    width: 66.666%;
+  }
+  /**
+    * Quarters
+    */
+  .desk-one-quarter {
+    width: 25%;
+  }
+  .desk-two-quarters {
+    width: 50%;
+  }
+  .desk-three-quarters {
+    width: 75%;
+  }
+  /**
+    * Fifths
+    */
+  .desk-one-fifth {
+    width: 20%;
+  }
+  .desk-two-fifths {
+    width: 40%;
+  }
+  .desk-three-fifths {
+    width: 60%;
+  }
+  .desk-four-fifths {
+    width: 80%;
+  }
+  /**
+    * Sixths
+    */
+  .desk-one-sixth {
+    width: 16.666%;
+  }
+  .desk-two-sixths {
+    width: 33.333%;
+  }
+  .desk-three-sixths {
+    width: 50%;
+  }
+  .desk-four-sixths {
+    width: 66.666%;
+  }
+  .desk-five-sixths {
+    width: 83.333%;
+  }
+  /**
+   * Sevenths
+   */
+  .desk-one-seventh {
+    width: 14.26%;
+  }
+  .desk-two-sevenths {
+    width: 28.56%;
+  }
+  .desk-three-sevenths {
+    width: 42.86%;
+  }
+  .desk-four-sevenths {
+    width: 57.14%;
+  }
+  .desk-five-sevenths {
+    width: 71.42%;
+  }
+  .desk-six-sevenths {
+    width: 85.71%;
+  }
+  /**
+    * Eighths
+    */
+  .desk-one-eighth {
+    width: 12.5%;
+  }
+  .desk-two-eighths {
+    width: 25%;
+  }
+  .desk-three-eighths {
+    width: 37.5%;
+  }
+  .desk-four-eighths {
+    width: 50%;
+  }
+  .desk-five-eighths {
+    width: 62.5%;
+  }
+  .desk-six-eighths {
+    width: 75%;
+  }
+  .desk-seven-eighths {
+    width: 87.5%;
+  }
+  /**
+    * Ninths
+    */
+  .desk-one-ninth {
+    width: 11.111%;
+  }
+  .desk-two-ninths {
+    width: 22.222%;
+  }
+  .desk-three-ninths {
+    width: 33.333%;
+  }
+  .desk-four-ninths {
+    width: 44.444%;
+  }
+  .desk-five-ninths {
+    width: 55.555%;
+  }
+  .desk-six-ninths {
+    width: 66.666%;
+  }
+  .desk-seven-ninths {
+    width: 77.777%;
+  }
+  .desk-eight-ninths {
+    width: 88.888%;
+  }
+  /**
+    * Tenths
+    */
+  .desk-one-tenth {
+    width: 10%;
+  }
+  .desk-two-tenths {
+    width: 20%;
+  }
+  .desk-three-tenths {
+    width: 30%;
+  }
+  .desk-four-tenths {
+    width: 40%;
+  }
+  .desk-five-tenths {
+    width: 50%;
+  }
+  .desk-six-tenths {
+    width: 60%;
+  }
+  .desk-seven-tenths {
+    width: 70%;
+  }
+  .desk-eight-tenths {
+    width: 80%;
+  }
+  .desk-nine-tenths {
+    width: 90%;
+  }
+  /**
+    * Twelfths
+    */
+  .desk-one-twelfth {
+    width: 8.333%;
+  }
+  .desk-two-twelfths {
+    width: 16.666%;
+  }
+  .desk-three-twelfths {
+    width: 25%;
+  }
+  .desk-four-twelfths {
+    width: 33.333%;
+  }
+  .desk-five-twelfths {
+    width: 41.666%;
+  }
+  .desk-six-twelfths {
+    width: 50%;
+  }
+  .desk-seven-twelfths {
+    width: 58.333%;
+  }
+  .desk-eight-twelfths {
+    width: 66.666%;
+  }
+  .desk-nine-twelfths {
+    width: 75%;
+  }
+  .desk-ten-twelfths {
+    width: 83.333%;
+  }
+  .desk-eleven-twelfths {
+    width: 91.666%;
+  }
+}
+
+@media only screen and (min-width: 1199px) and (max-width: 1375px) and (max-height: 700px) {
+  /**
+    * Whole
+    */
+  .desk-one-whole {
+    width: 100%;
+  }
+  /**
+    * Halves
+    */
+  .desk-one-half {
+    width: 50%;
+  }
+  /**
+    * Thirds
+    */
+  .desk-one-third {
+    width: 33.333%;
+  }
+  .desk-two-thirds {
+    width: 66.666%;
+  }
+  /**
+    * Quarters
+    */
+  .desk-one-quarter {
+    width: 25%;
+  }
+  .desk-two-quarters {
+    width: 50%;
+  }
+  .desk-three-quarters {
+    width: 75%;
+  }
+  /**
+    * Fifths
+    */
+  .desk-one-fifth {
+    width: 20%;
+  }
+  .desk-two-fifths {
+    width: 40%;
+  }
+  .desk-three-fifths {
+    width: 60%;
+  }
+  .desk-four-fifths {
+    width: 80%;
+  }
+  /**
+    * Sixths
+    */
+  .desk-one-sixth {
+    width: 16.666%;
+  }
+  .desk-two-sixths {
+    width: 33.333%;
+  }
+  .desk-three-sixths {
+    width: 50%;
+  }
+  .desk-four-sixths {
+    width: 66.666%;
+  }
+  .desk-five-sixths {
+    width: 83.333%;
+  }
+  /**
+   * Sevenths
+   */
+  .desk-one-seventh {
+    width: 14.26%;
+  }
+  .desk-two-sevenths {
+    width: 28.56%;
+  }
+  .desk-three-sevenths {
+    width: 42.86%;
+  }
+  .desk-four-sevenths {
+    width: 57.14%;
+  }
+  .desk-five-sevenths {
+    width: 71.42%;
+  }
+  .desk-six-sevenths {
+    width: 85.71%;
+  }
+  /**
+    * Eighths
+    */
+  .desk-one-eighth {
+    width: 12.5%;
+  }
+  .desk-two-eighths {
+    width: 25%;
+  }
+  .desk-three-eighths {
+    width: 37.5%;
+  }
+  .desk-four-eighths {
+    width: 50%;
+  }
+  .desk-five-eighths {
+    width: 62.5%;
+  }
+  .desk-six-eighths {
+    width: 75%;
+  }
+  .desk-seven-eighths {
+    width: 87.5%;
+  }
+  /**
+    * Ninths
+    */
+  .desk-one-ninth {
+    width: 11.111%;
+  }
+  .desk-two-ninths {
+    width: 22.222%;
+  }
+  .desk-three-ninths {
+    width: 33.333%;
+  }
+  .desk-four-ninths {
+    width: 44.444%;
+  }
+  .desk-five-ninths {
+    width: 55.555%;
+  }
+  .desk-six-ninths {
+    width: 66.666%;
+  }
+  .desk-seven-ninths {
+    width: 77.777%;
+  }
+  .desk-eight-ninths {
+    width: 88.888%;
+  }
+  /**
+    * Tenths
+    */
+  .desk-one-tenth {
+    width: 10%;
+  }
+  .desk-two-tenths {
+    width: 20%;
+  }
+  .desk-three-tenths {
+    width: 30%;
+  }
+  .desk-four-tenths {
+    width: 40%;
+  }
+  .desk-five-tenths {
+    width: 50%;
+  }
+  .desk-six-tenths {
+    width: 60%;
+  }
+  .desk-seven-tenths {
+    width: 70%;
+  }
+  .desk-eight-tenths {
+    width: 80%;
+  }
+  .desk-nine-tenths {
+    width: 90%;
+  }
+  /**
+    * Twelfths
+    */
+  .desk-one-twelfth {
+    width: 8.333%;
+  }
+  .desk-two-twelfths {
+    width: 16.666%;
+  }
+  .desk-three-twelfths {
+    width: 25%;
+  }
+  .desk-four-twelfths {
+    width: 33.333%;
+  }
+  .desk-five-twelfths {
+    width: 41.666%;
+  }
+  .desk-six-twelfths {
+    width: 50%;
+  }
+  .desk-seven-twelfths {
+    width: 58.333%;
+  }
+  .desk-eight-twelfths {
+    width: 66.666%;
+  }
+  .desk-nine-twelfths {
+    width: 75%;
+  }
+  .desk-ten-twelfths {
+    width: 83.333%;
+  }
+  .desk-eleven-twelfths {
+    width: 91.666%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .lap-zero, .mobile-zero {
+    display: inline-block;
+  }
+  .desk-zero {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 1199px) and (max-width: 1375px) and (max-height: 700px) {
+  .lap-zero, .mobile-zero {
+    display: inline-block;
+  }
+  .desk-zero {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1199px) {
+  .desk-zero, .mobile-zero {
+    display: inline-block;
+  }
+  .lap-zero {
+    display: none !important;
+    right: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .desk-zero, .lap-zero {
+    display: inline-block;
+  }
+  .mobile-zero {
+    display: none !important;
+  }
+}
+
+/* extra classes for ease of use */
+@media only screen and (min-width: 601px) {
+  .mobile-only {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .tablet-and-down {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+}
+
+@media only screen and (min-width: 1199px) and (max-width: 1375px) and (max-height: 700px) {
+  .tablet-and-down {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .tablet-only {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .tablet-only {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+}
+
+@media only screen and (min-width: 1199px) and (max-width: 1375px) and (max-height: 700px) {
+  .tablet-only {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .tablet-and-up {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .desk-only {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+}
+
+header, section, footer {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1920px;
+  padding: 0;
+  width: 100%;
+}
+
+@media only screen and (min-width: 601px) {
+  .interior, .all-layouts-carousel .slick-dots {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 5%;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .interior, .all-layouts-carousel .slick-dots {
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+  }
+}
+
+button.disabled {
+  background: #999999 !important;
+  border: 2px solid #262729 !important;
+  color: white !important;
+}
+
+button.disabled:hover {
+  background: #999999 !important;
+  border: 2px solid #262729 !important;
+  color: white !important;
+}
+
+.pullquote-carousel .slick-track {
+  background: #262729 url("../../img/geometric-tile.png") center left repeat;
+}
+
+.header-font, h1, h2 {
+  font-family: Patua One, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.body-font, body {
+  font-family: Catamaran, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  color: #262729;
+  font-weight: 400;
+  font-size: 2rem !important;
+  line-height: 1.3;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1199px) {
+  body {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 1.5rem;
+  }
+}
+
+body b {
+  font-weight: 700;
+}
+
+a, a:active, a:visited {
+  color: #262729;
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom: 0px;
+  text-decoration: none !important;
+  transition: background 0.25s ease-out;
+  background: linear-gradient(rebeccapurple, rebeccapurple);
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+a:hover, a.active, a:active:hover, a:active.active, a:visited:hover, a:visited.active {
+  background-size: 100% 2px;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: rebeccapurple;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1199px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1199px) {
+  h2 {
+    font-size: 2.25rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+header, section, footer {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1920px;
+  padding: 0;
+  width: 100%;
+}
+
+@media only screen and (min-width: 601px) {
+  .interior, .all-layouts-carousel .slick-dots {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 5%;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .interior, .all-layouts-carousel .slick-dots {
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+  }
+}
+
+button.disabled {
+  background: #999999 !important;
+  border: 2px solid #262729 !important;
+  color: white !important;
+}
+
+button.disabled:hover {
+  background: #999999 !important;
+  border: 2px solid #262729 !important;
+  color: white !important;
+}
+
+.pullquote-carousel .slick-track {
+  background: #262729 url("../../img/geometric-tile.png") center left repeat;
+}
+
+html {
+  font-size: 62.5%;
+  position: relative;
+}
+
+body {
+  background: white;
+  font-size: 1.4rem;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+}
+
+/* header */
+/* header */
+header {
+  background: #262729;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+}
+
+.overlay-open header {
+  z-index: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+  header {
+    /* desk menu dropdown */
+  }
+  .nav-open header {
+    background: transparent;
+    overflow: visible;
+    position: absolute;
+    top: 45px;
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  header {
+    text-align: right;
+  }
+}
+
+header a {
+  color: white;
+}
+
+header .interior {
+  padding-right: 0 !important;
+}
+
+#menu-primary {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  z-index: 3;
+}
+
+#menu-primary #LyndaLogo {
+  background: transparent url("../../img/lynda.jpg") top left no-repeat;
+  background-size: 100%;
+  display: inline-block;
+}
+
+@media only screen and (min-width: 1200px) {
+  #menu-primary {
+    margin: 20px 0;
+  }
+  #menu-primary #LyndaLogo {
+    height: 100px;
+    width: 150px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1199px) {
+  #menu-primary {
+    margin: 10px 0;
+  }
+  #menu-primary #LyndaLogo {
+    height: 50px;
+    width: 75px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #menu-primary {
+    margin: 7px 0;
+  }
+  #menu-primary #LyndaLogo {
+    height: 40px;
+    width: 60px;
+  }
+}
+
+#menu-primary h1 {
+  color: white;
+  display: inline-block;
+  line-height: 1.1;
+}
+
+@media only screen and (min-width: 1200px) {
+  #menu-primary h1 {
+    font-size: 5rem;
+    margin: 0 0 0 50px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1199px) {
+  #menu-primary h1 {
+    font-size: 3rem;
+    margin: 0 0 0 30px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #menu-primary h1 {
+    font-size: 2rem;
+    margin: 0 0 0 20px;
+  }
+}
+
+.overlay-open #body-wrapper {
+  z-index: 0;
+}
+
+body.overlay-open, .nav-open, .overlay-open, .amenities-open, .connect-open, .floor-plans-open {
+  overflow: hidden;
+}
+
+section {
+  z-index: 1;
+}
+
+#banner {
+  background-color: dodgerblue;
+  color: white;
+  padding: 10px 0;
+  text-shadow: 0px 0px 3px #00060f;
+  text-align: center;
+}
+
+#banner h3 {
+  margin: 0;
+}
+
+#banner a {
+  color: white !important;
+  display: inline-block;
+  padding-bottom: 0px;
+  text-decoration: none !important;
+  transition: background 0.25s ease-out;
+  background: linear-gradient(white, white);
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+#banner a:hover, #banner a.active {
+  background-size: 100% 2px;
+  text-decoration: none !important;
+}
+
+section.subject .interior {
+  border-bottom: 3px solid #f4f4f4;
+  margin-bottom: 60px;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+section.subject .interior h2 {
+  margin-bottom: 7px;
+}
+
+section.subject .interior .date_completed {
+  margin-top: 0;
+}
+
+section.subject .interior ul {
+  margin: 30px 0 0 30px;
+}
+
+section.subject .interior > ul > li {
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+section.subject .interior > ul > li:last-of-type {
+  border-bottom: 0;
+}
+
+section.subject .interior > ul > li > ul > li {
+  margin-bottom: 20px;
+}
+
+section.subject .interior .section_bg {
+  opacity: .3;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  height: 125px;
+}
+
+section.subject:last-of-type .interior {
+  border: 0;
+}
+
+#programming_basics .interior {
+  margin-top: 60px;
+}
+
+/* checkmark bullets */
+li.checkmark {
+  padding: 0 0 5px 10px;
+}
+
+li.checkmark:before {
+  content: url("../../img/icon-checkmark.jpg");
+  display: inline-block;
+  margin: 1px 5px 0 0;
+  vertical-align: middle;
+  width: 20px;
+}
+
+li.checkmark span {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% - 30px);
+}
+
+#back-to-top-arrow {
+  background: transparent url("../../img/back-to-top-arrow.png") top left no-repeat;
+  background-size: 40px 40px;
+  display: block;
+  height: 40px;
+  opacity: .65;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  visibility: visible;
+  width: 40px;
+  transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  z-index: 101;
+}
+
+#back-to-top-arrow:hover {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-open #back-to-top-arrow, .overlay-open #back-to-top-arrow, .amenities-open #back-to-top-arrow, .connect-open #back-to-top-arrow, .floor-plans-open #back-to-top-arrow {
+    display: none !important;
+  }
+}
+
+/* footer */
+/* footer */
+footer {
+  background: #262729;
+  color: white;
+  margin-top: 60px;
+  overflow: auto;
+  padding: 30px 0;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    margin-top: 30px;
+  }
+}
+
+footer a {
+  color: white;
+}
+
+/* page includes*/
+/* homepage */
+#homepage {
+  /* marquee */
+  /* city image paths */
+}
+
+#homepage #locations {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#homepage #locations div {
+  background-color: rebeccapurple;
+  display: inline-block;
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  vertical-align: top;
+}
+
+@media only screen and (min-width: 601px) {
+  #homepage #locations div {
+    float: left;
+    overflow: visible;
+    padding-bottom: 26.6%;
+    width: 20%;
+    -webkit-box-shadow: -9px 0px 33px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: -9px 0px 33px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: -9px 0px 33px 0px rgba(0, 0, 0, 0.25);
+    transition: all 250ms cubic-bezier(0.9, 0.13, 0.58, 0.86);
+    -webkit-transition: all 250ms cubic-bezier(0.9, 0.13, 0.58, 0.86);
+    -moz-transition: all 250ms cubic-bezier(0.9, 0.13, 0.58, 0.86);
+    -o-transition: all 250ms cubic-bezier(0.9, 0.13, 0.58, 0.86);
+    transition-timing-function: cubic-bezier(0.9, 0.13, 0.58, 0.86);
+    /* don't animate first item */
+    /* make second item slide back to reveal first item */
+    /* proportions for different city tile layouts */
+    /* layouts are dependent on each image measuring */
+    /* 800w x 1000h, or 1000w x 1250h (or any .75 / 3:4 ratio equivalent) */
+    /* the proportions of the containers are actually 3:4;
+        /* the 4:5 overage is to account for the left sliding motion of the tabs, */
+    /* which reveals a portion of the image covered by its neighbor */
+    /* five across */
+    /* six across */
+    /* seven across */
+    /* eight across */
+    /* nine across */
+    /* ten across */
+    /* on 8-up, 9-up and 10-up layouts we use the vertical bar style (tablet style) only
+        because there isn't enough room for the names and the "open" box, otherwise.*/
+  }
+  #homepage #locations div:hover {
+    -webkit-box-shadow: -9px 0px 33px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -9px 0px 33px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -9px 0px 33px 0px rgba(0, 0, 0, 0.75);
+  }
+  #homepage #locations div:hover a {
+    opacity: 1;
+  }
+  #homepage #locations div:hover span, #homepage #locations div:hover a {
+    color: white;
+  }
+  #homepage #locations div:hover span.greyBG {
+    background: black;
+    background: rgba(0, 0, 0, 0.9);
+  }
+  #homepage #locations div:hover span.opening {
+    transform: translateX(0) !important;
+  }
+  #homepage #locations div:first-of-type {
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+  }
+  #homepage #locations div:first-of-type:hover {
+    transform: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  #homepage #locations div.revealRight {
+    -webkit-box-shadow: -9px 0px 33px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -9px 0px 33px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -9px 0px 33px 0px rgba(0, 0, 0, 0.75);
+  }
+  #homepage #locations div.desk-one-fifth:hover, #homepage #locations div.tablet-one-fifth:hover {
+    transform: translateX(-8.5%) !important;
+  }
+  #homepage #locations div.desk-one-fifth.revealRight, #homepage #locations div.tablet-one-fifth.revealRight {
+    transform: translateX(6.5%) !important;
+  }
+  #homepage #locations div.desk-one-fifth span.opening, #homepage #locations div.tablet-one-fifth span.opening {
+    width: 19%;
+    transform: translateX(-44%);
+  }
+  #homepage #locations div.desk-one-sixth, #homepage #locations div.tablet-one-sixth {
+    margin-left: -3.34%;
+    right: -3.34%;
+  }
+  #homepage #locations div.desk-one-sixth:hover, #homepage #locations div.tablet-one-sixth:hover {
+    transform: translateX(-25%) !important;
+  }
+  #homepage #locations div.desk-one-sixth.revealRight, #homepage #locations div.tablet-one-sixth.revealRight {
+    transform: translateX(23%) !important;
+  }
+}
+
+@media only screen and (min-width: 601px) and (min-width: 1200px) {
+  #homepage #locations div.desk-one-sixth span.greyBG, #homepage #locations div.tablet-one-sixth span.greyBG {
+    padding: 0 0 0 4%;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  #homepage #locations div.desk-one-sixth span.opening, #homepage #locations div.tablet-one-sixth span.opening {
+    width: 18%;
+    transform: translateX(-138%);
+  }
+}
+
+@media only screen and (min-width: 601px) and (min-width: 1200px) {
+  #homepage #locations div.desk-one-sixth span.opening, #homepage #locations div.tablet-one-sixth span.opening {
+    font-size: 1rem !important;
+  }
+  #homepage #locations div.desk-one-sixth span.opening b, #homepage #locations div.tablet-one-sixth span.opening b {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  #homepage #locations div.desk-one-seventh, #homepage #locations div.tablet-one-seventh {
+    margin-left: -5.75%;
+    right: -5.75%;
+  }
+  #homepage #locations div.desk-one-seventh:hover, #homepage #locations div.tablet-one-seventh:hover {
+    transform: translateX(-36.5%) !important;
+  }
+  #homepage #locations div.desk-one-seventh.revealRight, #homepage #locations div.tablet-one-seventh.revealRight {
+    transform: translateX(30%) !important;
+  }
+}
+
+@media only screen and (min-width: 601px) and (min-width: 1200px) {
+  #homepage #locations div.desk-one-seventh a, #homepage #locations div.tablet-one-seventh a {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (min-width: 601px) and (min-width: 320px) and (max-width: 1440px) {
+  #homepage #locations div.desk-one-seventh a, #homepage #locations div.tablet-one-seventh a {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (min-width: 601px) and (min-width: 1200px) {
+  #homepage #locations div.desk-one-seventh span.greyBG, #homepage #locations div.tablet-one-seventh span.greyBG {
+    padding: 0 0 0 3%;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  #homepage #locations div.desk-one-seventh span.opening, #homepage #locations div.tablet-one-seventh span.opening {
+    width: 17%;
+    transform: translateX(-211%);
+  }
+}
+
+@media only screen and (min-width: 601px) and (min-width: 1200px) {
+  #homepage #locations div.desk-one-seventh span.opening, #homepage #locations div.tablet-one-seventh span.opening {
+    font-size: 1rem !important;
+  }
+  #homepage #locations div.desk-one-seventh span.opening b, #homepage #locations div.tablet-one-seventh span.opening b {
+    font-size: 1.1rem !important;
+  }
+}
+
+@media only screen and (min-width: 601px) and (min-width: 1199px) and (max-width: 1300px) {
+  #homepage #locations div.desk-one-seventh span.opening, #homepage #locations div.tablet-one-seventh span.opening {
+    font-size: .9rem !important;
+  }
+  #homepage #locations div.desk-one-seventh span.opening b, #homepage #locations div.tablet-one-seventh span.opening b {
+    font-size: 1rem !important;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  #homepage #locations div.desk-one-eighth, #homepage #locations div.tablet-one-eighth {
+    margin-left: -7.5%;
+    right: -7.5%;
+  }
+  #homepage #locations div.desk-one-eighth:hover, #homepage #locations div.tablet-one-eighth:hover {
+    transform: translateX(-36%) !important;
+  }
+  #homepage #locations div.desk-one-eighth.revealRight, #homepage #locations div.tablet-one-eighth.revealRight {
+    transform: translateX(40%) !important;
+  }
+  #homepage #locations div.desk-one-ninth, #homepage #locations div.tablet-one-ninth {
+    margin-left: -9.01%;
+    right: -9%;
+  }
+  #homepage #locations div.desk-one-ninth:hover, #homepage #locations div.tablet-one-ninth:hover {
+    transform: translateX(-48%) !important;
+  }
+  #homepage #locations div.desk-one-ninth.revealRight, #homepage #locations div.tablet-one-ninth.revealRight {
+    transform: translateX(42%) !important;
+  }
+  #homepage #locations div.desk-one-tenth, #homepage #locations div.tablet-one-tenth {
+    margin-left: -10.01%;
+    right: -10%;
+  }
+  #homepage #locations div.desk-one-tenth:hover, #homepage #locations div.tablet-one-tenth:hover {
+    transform: translateX(-48%) !important;
+  }
+  #homepage #locations div.desk-one-tenth.revealRight, #homepage #locations div.tablet-one-tenth.revealRight {
+    transform: translateX(40%) !important;
+  }
+}
+
+@media only screen and (min-width: 601px) and (min-width: 601px) {
+  #homepage #locations div.desk-one-eighth span.greyBG, #homepage #locations div.tablet-one-eighth span.greyBG, #homepage #locations div.desk-one-ninth span.greyBG, #homepage #locations div.tablet-one-ninth span.greyBG, #homepage #locations div.desk-one-tenth span.greyBG, #homepage #locations div.tablet-one-tenth span.greyBG {
+    -ms-transform: rotate(-90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-90deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+    height: 17%;
+    margin-left: 20.75%;
+    margin-bottom: -1%;
+    padding: 0 6.5% 0 0;
+    text-align: right;
+    width: 127%;
+  }
+}
+
+@media only screen and (min-width: 601px) and (min-width: 601px) and (min-width: 601px) and (max-width: 800px) {
+  #homepage #locations div.desk-one-eighth span.greyBG, #homepage #locations div.tablet-one-eighth span.greyBG, #homepage #locations div.desk-one-ninth span.greyBG, #homepage #locations div.tablet-one-ninth span.greyBG, #homepage #locations div.desk-one-tenth span.greyBG, #homepage #locations div.tablet-one-tenth span.greyBG {
+    height: 20%;
+    margin-left: 24%;
+  }
+}
+
+@media only screen and (min-width: 601px) and (min-width: 601px) {
+  #homepage #locations div.desk-one-eighth span.opening, #homepage #locations div.tablet-one-eighth span.opening, #homepage #locations div.desk-one-ninth span.opening, #homepage #locations div.tablet-one-ninth span.opening, #homepage #locations div.desk-one-tenth span.opening, #homepage #locations div.tablet-one-tenth span.opening {
+    display: none !important;
+  }
+  #homepage #locations div.desk-one-eighth span.opening-tablet, #homepage #locations div.tablet-one-eighth span.opening-tablet, #homepage #locations div.desk-one-ninth span.opening-tablet, #homepage #locations div.tablet-one-ninth span.opening-tablet, #homepage #locations div.desk-one-tenth span.opening-tablet, #homepage #locations div.tablet-one-tenth span.opening-tablet {
+    display: table-cell !important;
+    font-size: 1.3rem;
+    width: 17%;
+    -ms-transform: rotate(90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(90deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+  }
+  #homepage #locations div.desk-one-eighth span.opening-tablet b, #homepage #locations div.tablet-one-eighth span.opening-tablet b, #homepage #locations div.desk-one-ninth span.opening-tablet b, #homepage #locations div.tablet-one-ninth span.opening-tablet b, #homepage #locations div.desk-one-tenth span.opening-tablet b, #homepage #locations div.tablet-one-tenth span.opening-tablet b {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 601px) and (min-width: 601px) and (min-width: 601px) and (max-width: 1200px) {
+  #homepage #locations div.desk-one-eighth span.opening-tablet, #homepage #locations div.tablet-one-eighth span.opening-tablet, #homepage #locations div.desk-one-ninth span.opening-tablet, #homepage #locations div.tablet-one-ninth span.opening-tablet, #homepage #locations div.desk-one-tenth span.opening-tablet, #homepage #locations div.tablet-one-tenth span.opening-tablet {
+    font-size: 1.2rem;
+  }
+  #homepage #locations div.desk-one-eighth span.opening-tablet b, #homepage #locations div.tablet-one-eighth span.opening-tablet b, #homepage #locations div.desk-one-ninth span.opening-tablet b, #homepage #locations div.tablet-one-ninth span.opening-tablet b, #homepage #locations div.desk-one-tenth span.opening-tablet b, #homepage #locations div.tablet-one-tenth span.opening-tablet b {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (min-width: 601px) and (min-width: 601px) and (min-width: 601px) and (max-width: 800px) {
+  #homepage #locations div.desk-one-eighth span.opening-tablet, #homepage #locations div.tablet-one-eighth span.opening-tablet, #homepage #locations div.desk-one-ninth span.opening-tablet, #homepage #locations div.tablet-one-ninth span.opening-tablet, #homepage #locations div.desk-one-tenth span.opening-tablet, #homepage #locations div.tablet-one-tenth span.opening-tablet {
+    width: 20% !important;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  #homepage #locations div:first-of-type:hover {
+    transform: translateX(0) !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #homepage #locations div {
+    border-bottom: 3px solid white;
+    /* proportions for different city tile layouts */
+    /* five across */
+    /* six across */
+    /* seven across */
+    /* eight across */
+    /* nine across */
+    /* ten across */
+  }
+  #homepage #locations div:first-of-type {
+    border-top: 3px solid white;
+  }
+  #homepage #locations div.desk-one-fifth, #homepage #locations div.tablet-one-fifth {
+    padding-bottom: 18%;
+  }
+  #homepage #locations div.desk-one-sixth, #homepage #locations div.tablet-one-sixth {
+    padding-bottom: 18%;
+  }
+  #homepage #locations div.desk-one-seventh, #homepage #locations div.tablet-one-seventh {
+    padding-bottom: 17%;
+  }
+  #homepage #locations div.desk-one-eighth, #homepage #locations div.tablet-one-eighth {
+    padding-bottom: 17%;
+  }
+  #homepage #locations div.desk-one-ninth, #homepage #locations div.tablet-one-ninth {
+    padding-bottom: 16%;
+  }
+  #homepage #locations div.desk-one-tenth, #homepage #locations div.tablet-one-tenth {
+    padding-bottom: 16%;
+  }
+}
+
+#homepage #locations div a {
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-color: white;
+  color: #f4f4f4;
+  font-size: 2rem;
+  height: 100%;
+  line-height: 1.1;
+  opacity: .9;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-decoration: none;
+  vertical-align: bottom;
+  transition: all 250ms cubic-bezier(0.9, 0.13, 0.58, 0.86);
+  -webkit-transition: all 250ms cubic-bezier(0.9, 0.13, 0.58, 0.86);
+  -moz-transition: all 250ms cubic-bezier(0.9, 0.13, 0.58, 0.86);
+  -o-transition: all 250ms cubic-bezier(0.9, 0.13, 0.58, 0.86);
+  transition-timing-function: cubic-bezier(0.9, 0.13, 0.58, 0.86);
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1440px) {
+  #homepage #locations div a {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  #homepage #locations div a {
+    margin-left: 3%;
+    width: 106.25%;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1199px) {
+  #homepage #locations div a {
+    font-size: 1.5rem;
+    margin-left: 3%;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+  #homepage #locations div a {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #homepage #locations div a {
+    background-size: cover;
+    display: inline-block;
+    font-size: 1.2rem;
+    width: 100%;
+  }
+}
+
+#homepage #locations div span.greyBG {
+  background: black;
+  background: rgba(0, 0, 0, 0.7);
+  display: table;
+  color: #f4f4f4;
+  height: 50px;
+  line-height: 1;
+  padding: 0 0 0 5%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: all 250ms cubic-bezier(0.9, 0.13, 0.58, 0.86);
+  -webkit-transition: all 250ms cubic-bezier(0.9, 0.13, 0.58, 0.86);
+  -moz-transition: all 250ms cubic-bezier(0.9, 0.13, 0.58, 0.86);
+  -o-transition: all 250ms cubic-bezier(0.9, 0.13, 0.58, 0.86);
+  transition-timing-function: cubic-bezier(0.9, 0.13, 0.58, 0.86);
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1199px) {
+  #homepage #locations div span.greyBG {
+    -ms-transform: rotate(-90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-90deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+    height: 17%;
+    margin-left: 21%;
+    margin-bottom: -1%;
+    padding: 0 6.5% 0 0;
+    text-align: right;
+    width: 127%;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1199px) and (min-width: 601px) and (max-width: 800px) {
+  #homepage #locations div span.greyBG {
+    height: 20%;
+    margin-left: 24%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #homepage #locations div span.greyBG {
+    height: 25px;
+    padding: 7px 5%;
+  }
+}
+
+#homepage #locations div span.greyBG span.copy {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+@media only screen and (min-width: 601px) {
+  #homepage #locations div:first-of-type a {
+    left: -3%;
+  }
+}
+
+#homepage .desk-small {
+  display: none;
+}
+
+@media only screen and (min-width: 601px) {
+  #homepage #programming_basics_header a {
+    background-image: url("../../img//programming_basics.jpg");
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #homepage #programming_basics_header a {
+    background-image: url("../../img//programming_basics_mobile.jpg");
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  #homepage #c_sharp_header a {
+    background-image: url("../../img//c_sharp.jpg");
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #homepage #c_sharp_header a {
+    background-image: url("../../img//c_sharp_mobile.jpg");
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  #homepage #asp_dot_net_header a {
+    background-image: url("../../img//asp_dot_net.jpg");
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #homepage #asp_dot_net_header a {
+    background-image: url("../../img//asp_dot_net_mobile.jpg");
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  #homepage #agile_header a {
+    background-image: url("../../img//agile.jpg");
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #homepage #agile_header a {
+    background-image: url("../../img//agile_mobile.jpg");
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  #homepage #css3_animations_header a {
+    background-image: url("../../img//css3_animations.jpg");
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #homepage #css3_animations_header a {
+    background-image: url("../../img//css3_animations_mobile.jpg");
+  }
+}
+
+/* library includes*/
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/* carousel CSS */
+/*------------------------------------*    COLORS
+\*------------------------------------*/
+/*------------------------------------*    PATHING VARS
+\*------------------------------------*/
+/*------------------------------------*    WIDTH VARS
+\*------------------------------------*/
+/*------------------------------------*    MEDIA QUERIES
+    if changing these width values,
+    please also update the matching
+    LC.Widths variables in the
+    jt.js file.
+\*------------------------------------*/
+/* mobile breakpoint*/
+/* tablet breakpoint */
+/* desktop breakpoint */
+/* Shared Styles */
+/* Slider */
+.slick-loading .slick-list {
+  background: transparent url("../../img/ajax-loader.gif") center center no-repeat;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-dots {
+  position: absolute;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  background: transparent;
+  border: 1px solid #262729;
+  cursor: pointer;
+  display: block;
+  font-size: 0px;
+  line-height: 0px;
+  outline: none;
+  padding: 0;
+  transition: all .35s ease;
+}
+
+.slick-dots li.slick-active button {
+  background: #262729;
+}
+
+/* All-layout carousel styles */
+.all-layouts-carousel {
+  /* Arrows for all-layout-carousels */
+}
+
+.all-layouts-carousel .slick-arrow {
+  background-color: transparent;
+  background-size: 73px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  border: 0;
+  font-size: 0;
+  height: 73px;
+  opacity: .85;
+  overflow: hidden;
+  position: absolute;
+  top: 45%;
+  text-align: -999px;
+  transition: all 250ms ease;
+  width: 26px;
+  z-index: 2;
+}
+
+.all-layouts-carousel .slick-arrow:hover {
+  opacity: 1;
+}
+
+.all-layouts-carousel .slick-prev {
+  background-image: url("../../img/icon-carousel-prev-white.svg");
+  left: 20px;
+}
+
+.all-layouts-carousel .slick-next {
+  background-image: url("../../img/icon-carousel-next-white.svg");
+  right: 20px;
+}
+
+.all-layouts-carousel .slick-dots {
+  margin: 0 auto;
+  bottom: 20px;
+  right: 0;
+  left: 0;
+}
+
+@media only screen and (min-width: 601px) {
+  .all-layouts-carousel .slick-dots {
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .all-layouts-carousel .slick-dots {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .all-layouts-carousel .slick-dots li {
+    height: 26px;
+    margin: 0 20px 0 0;
+    width: 26px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .all-layouts-carousel .slick-dots li {
+    height: 20px;
+    margin: 0 5px;
+    width: 20px;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .all-layouts-carousel .slick-dots li button {
+    height: 24px;
+    width: 24px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .all-layouts-carousel .slick-dots li button {
+    height: 14px;
+    width: 14px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+  }
+}
+
+.all-layouts-carousel .slick-dots li button:hover {
+  background: #262729;
+}
+
+.all-layouts-carousel.our-team-carousel .slick-list {
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 601px) {
+  .all-layouts-carousel.our-team-carousel .slick-list {
+    width: calc(100% - 100px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .all-layouts-carousel.our-team-carousel .slick-list {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .all-layouts-carousel.our-team-carousel .slick-slide {
+    padding: 0 30px;
+  }
+}
+
+.all-layouts-carousel.our-team-carousel .slick-slide img {
+  display: block;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 601px) {
+  .all-layouts-carousel.our-team-carousel .slick-slide img {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .all-layouts-carousel.our-team-carousel .slick-slide img {
+    width: 80%;
+  }
+}
+
+.all-layouts-carousel.our-team-carousel .slick-arrow {
+  opacity: 1;
+  top: 60px;
+}
+
+.all-layouts-carousel.our-team-carousel .slick-arrow:hover {
+  opacity: .85;
+}
+
+@media only screen and (min-width: 601px) {
+  .all-layouts-carousel.our-team-carousel .slick-arrow {
+    background-size: 35px;
+    height: 102px;
+    width: 37px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .all-layouts-carousel.our-team-carousel .slick-arrow {
+    background-size: 18px;
+    height: 50px;
+    width: 20px;
+  }
+}
+
+.all-layouts-carousel.our-team-carousel .slick-prev {
+  background-image: url("../../img/icon-carousel-prev-black.svg");
+  left: 0;
+}
+
+.all-layouts-carousel.our-team-carousel .slick-next {
+  background-image: url("../../img/icon-carousel-next-black.svg");
+  right: 0;
+}
+
+/* pullquote carousels */
+.pullquote-carousel .slick-track {
+  display: flex;
+  margin: 20px 0 30px 0;
+}
+
+.pullquote-carousel .slick-track .slick-slide {
+  height: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.pullquote-carousel .pullquote {
+  color: white;
+  display: block;
+  line-height: 1.1;
+  padding: 30px 60px;
+}
+
+@media only screen and (max-width: 600px) {
+  .pullquote-carousel .pullquote {
+    padding: 30px 5%;
+  }
+}
+
+.pullquote-carousel .pullquote .quote {
+  display: block;
+  font-size: 2.1rem;
+}
+
+.pullquote-carousel .pullquote .byline {
+  display: block;
+  font-size: 1.7rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Mobile-only carousel styles*/
+/* Dots */
+.mobile-only-carousel.slick-dotted.slick-slider {
+  padding-bottom: 60px;
+}
+
+.mobile-only-carousel .slick-dots {
+  background: #f4f4f4;
+  bottom: 20px;
+  width: 100%;
+}
+
+.mobile-only-carousel .slick-dots li {
+  height: 20px;
+  margin: 0 5px;
+}
+
+.mobile-only-carousel .slick-dots li button {
+  height: 14px;
+  width: 14px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+}
+
+.mobile-only-carousel .slick-dots li button:hover, .mobile-only-carousel .slick-dots li button:focus, .mobile-only-carousel .slick-dots li button:active, .mobile-only-carousel .slick-dots li button:visited {
+  background: transparent;
+}
+
+.mobile-only-carousel .slick-dots li.slick-active button:hover, .mobile-only-carousel .slick-dots li.slick-active button:focus, .mobile-only-carousel .slick-dots li.slick-active button:active, .mobile-only-carousel .slick-dots li.slick-active button:visited {
+  background: #262729 !important;
+}
+
+.mobile-only-carousel.mobile-only-carousel.list-carousel {
+  background-color: white;
+  padding-bottom: 0 !important;
+}
+
+.mobile-only-carousel.mobile-only-carousel.list-carousel .slick-list {
+  margin: 0 30px;
+  width: calc(100% - 60px);
+}
+
+.mobile-only-carousel.mobile-only-carousel.list-carousel .slick-track {
+  padding: 20px 0;
+}
+
+.mobile-only-carousel.mobile-only-carousel.list-carousel .slick-slide {
+  padding: 0 10px;
+  text-align: center;
+}
+
+.mobile-only-carousel.mobile-only-carousel.list-carousel .slick-slide a {
+  border-bottom: 1px solid #262729;
+  color: #262729;
+  text-decoration: none;
+}
+
+.mobile-only-carousel.mobile-only-carousel.list-carousel .slick-slide a:hover, .mobile-only-carousel.mobile-only-carousel.list-carousel .slick-slide a:focus, .mobile-only-carousel.mobile-only-carousel.list-carousel .slick-slide a:active, .mobile-only-carousel.mobile-only-carousel.list-carousel .slick-slide a:visited {
+  color: #262729;
+  text-decoration: none;
+}
+
+.mobile-only-carousel.mobile-only-carousel.list-carousel .slick-arrow {
+  background-color: white;
+  background-size: 15px 40px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  border: 0;
+  font-size: 0;
+  height: 40px;
+  overflow: hidden;
+  position: absolute;
+  top: 10px;
+  text-align: -999px;
+  width: 15px;
+  z-index: 2;
+}
+
+.mobile-only-carousel.mobile-only-carousel.list-carousel .slick-prev {
+  background-image: url("../../img/icon-carousel-prev-black.svg");
+  left: 10px;
+}
+
+.mobile-only-carousel.mobile-only-carousel.list-carousel .slick-next {
+  background-image: url("../../img/icon-carousel-next-black.svg");
+  right: 10px;
+}
+
+.mobile-only-carousel.mobile-only-carousel.list-carousel .slick-dots {
+  display: none !important;
+}

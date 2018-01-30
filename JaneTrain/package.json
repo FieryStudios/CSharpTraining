@@ -1,0 +1,21 @@
+{
+  "name": "Lifestyle_Communities",
+  "version": "1.0.0",
+  "author": "Jane Irwin",
+  "description": "compile and minify SASS and JS files",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@bitbucket-ssh.uhub.biz:7999/vmlnalifeco/lifestylecommunities-com.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "jshint": "^2.9.5"
+  }
+}

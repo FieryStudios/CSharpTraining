@@ -1,0 +1,100 @@
+/* header */
+header{
+  @extend %exterior;
+  background: $darkGrey;
+  overflow:hidden;
+  position:relative;
+  z-index: 10;
+
+  .overlay-open &{
+    z-index:0;
+  }
+  @include media-query(desk){
+    /* desk menu dropdown */
+    .nav-open &{
+      background: transparent;
+      overflow:visible;
+      position:absolute;
+        top:45px;
+        left:0;
+    }
+  }
+
+  @include media-query(tablet-and-down){
+    text-align:right;
+  }
+
+
+  a{
+    color:white;
+  }
+  .interior{
+    padding-right:0!important;
+  }
+}
+
+
+#menu-primary {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  z-index: 3;
+
+  #LyndaLogo {
+    background: transparent url('#{$imgPath}lynda.jpg') top left no-repeat;
+    background-size: 100%;
+    display: inline-block;
+  }
+
+  @include media-query(desk) {
+    margin: 20px 0;
+    #LyndaLogo {
+        height: 100px;
+        width: 150px;
+    }
+  }
+  @include media-query(tablet) {
+    margin: 10px 0;
+    #LyndaLogo {
+      height: 50px;
+      width: 75px;
+    }
+  }
+  @include media-query(mobile) {
+    margin: 7px 0;
+    #LyndaLogo {
+      height: 40px;
+      width: 60px;
+    }
+  }
+  h1{
+    color: white;
+    display:inline-block;;
+    line-height: 1.1;
+
+    @include media-query(desk) {
+      font-size: 5rem;
+      margin: 0 0 0 50px;
+    }
+    @include media-query(tablet) {
+      font-size: 3rem;
+      margin: 0 0 0 30px;
+    }
+    @include media-query(mobile) {
+      font-size: 2rem;
+      margin: 0 0 0 20px;
+    }
+  }
+}
+
+
+#body-wrapper{
+  // has different behavior when non-navigation overlay is open
+  .overlay-open &{
+    z-index:0;
+  }
+}
+
+body.overlay-open, .nav-open, .overlay-open, .amenities-open, .connect-open, .floor-plans-open{
+  overflow:hidden;
+}

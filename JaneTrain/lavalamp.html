@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS3 Lava Lamp</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Catamaran|Patua+One');
+    </style>
+
+    <style type="text/css">
+        html, body{
+            background-color: lightslategray;
+            height: 100%;
+            margin:0;
+            padding:0;
+            width: 100%;
+            font-family: Catamaran, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 16px;
+        }
+        div{
+            box-sizing:border-box;
+        }
+        h3{
+            font-family:  Patua One, sans-serif;
+            font-weight: 400;
+            font-size: 30px;
+            font-style: normal;
+            margin-top:0;
+        }
+        #wrapper{
+            display: flex;
+            flex-direction: row;
+            height: 592px;
+            margin:60px auto;
+            max-width: 1000px;
+            position:relative;
+            width: 80%;
+        }
+        #text{
+            background-color: #ccc;
+            padding: 50px;
+            width: calc(100% - 300px);
+        }
+        #lampbox{
+            background-color:white;
+            height: 592px;
+            position:relative;
+            width: 300px;
+        }
+
+        @media screen and (max-width: 1000px){
+            #wrapper{ width: 94%;}
+        }
+        @media screen and (max-width: 850px){
+            #wrapper{
+                flex-direction: column;
+                height:auto;
+            }
+            #text, #lampbox{
+                width: 100%;
+            }
+            #text, #lampbox{
+                margin-bottom: 60px;
+            }
+            #lampbox{
+                height: 592px;
+            }
+        }
+        #lamp{
+            height: 592px;
+            width: 150px;
+            margin: 0 auto;
+            position: absolute;
+            left: 50px;
+            right: 50px;
+            top:0;
+            overflow: hidden;
+        }
+        #lamp_img{
+            display: block;
+            height: auto;
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            z-index: 10;
+        }
+        #lamp_shade{
+            height: 45%;
+            position: absolute;
+            top:15%;
+            left:0;
+            width: 100%;
+            z-index: 9;
+
+            /*red | orange | yellow | green | green-blue | cyan blue | royal blue | indigo blue | blue violet | violet red | violet */
+            background: -moz-linear-gradient(124deg,
+                rgba(254,1,1,.3),
+                rgba(254,170,1,.3),
+                rgba(254,255,1,.3),
+                rgba(100,255,1,.3),
+                rgba(1,255,100,.3),
+                rgba(1,255,255,.3),
+                rgba(1,1,255,.3),
+                rgba(100,1,255,.3),
+                rgba(255,1,255,.3),
+                rgba(255,1,100,.3)
+            );
+
+            background: -webkit-linear-gradient(124deg,
+                rgba(254,1,1,.3),
+                rgba(254,170,1,.3),
+                rgba(254,255,1,.3),
+                rgba(100,255,1,.3),
+                rgba(1,255,100,.3),
+                rgba(1,255,255,.3),
+                rgba(1,1,255,.3),
+                rgba(100,1,255,.3),
+                rgba(255,1,255,.3),
+                rgba(255,1,100,.3)
+            );
+            background: linear-gradient(
+                124deg,
+                rgba(254,1,1,.3),
+                rgba(254,170,1,.3),
+                rgba(254,255,1,.3),
+                rgba(100,255,1,.3),
+                rgba(1,255,100,.3),
+                rgba(1,255,255,.3),
+                rgba(1,1,255,.3),
+                rgba(100,1,255,.3),
+                rgba(255,1,255,.3),
+                rgba(255,1,100,.3)
+            );
+
+            animation: shade 40s;
+            animation-delay: 0;
+            animation-iteration-count: infinite;
+            background-size: 2000% 2000%;
+        }
+
+        @keyframes shade {
+            from { /*red*/
+                background-position: 0% 0%;
+            }
+
+            50% {
+                background-position: 98% 98%;
+            }
+            to { /*   violet */
+                background-position: 0% 0%;
+            }
+        }
+
+        .bubble{
+            position: absolute;
+            top: 60%;
+            left: 0;
+            right: 0;
+            z-index: 5;
+            margin: 0px auto;
+            animation-iteration-count: infinite!important;
+        }
+
+        /* shine on top of bubble*/
+        .bubble:before{
+            content: "";
+            position: absolute;
+            top: 1%;
+            left: 5%;
+            width: 90%;
+            height: 90%;
+            border-radius: 50%;
+            background: radial-gradient(circle at 50% 0px, #ffffff, rgba(255, 255, 255, 0) 70%);
+            filter: blur(5px);
+            z-index: 2;
+        }
+
+        /* red bubbles, smooth animation */
+        #bubble1, #bubble2, #bubble3{
+            background: radial-gradient(circle at 10px 10px, red, darkred 80%, mediumvioletred 100%);
+            border-radius: 100%;
+        }
+
+        #bubble1{
+            height: 60px;
+            width: 60px;
+            opacity:.9;
+            animation:  bubble1 40s;
+            animation-delay: .1s;
+        }
+
+        #bubble2{
+            height: 80px;
+            margin-right: -5%;
+            width: 80px;
+            opacity:.8;
+            animation:  bubble1 60s;
+            animation-delay: 5s;
+        }
+
+        #bubble3{
+            height: 50px;
+            width: 40px;
+            opacity:.7;
+            margin-left: 20%;
+            animation:  bubble1 70s;
+            animation-delay: 8s;
+        }
+
+        /* blue bubbles, jagged animation */
+        #bubble4, #bubble5, #bubble6{
+            background: radial-gradient(circle at 10px 10px, dodgerblue, darkblue 80%, deepskyblue 100%);
+            border-radius: 100%;
+        }
+
+        #bubble4{
+            height: 65px;
+            margin-right: -1%;
+            opacity: .7;
+            width: 65px;
+
+            animation:  bubble2 40s;
+            animation-delay:0s;
+        }
+
+        #bubble5{
+            height: 70px;
+            opacity: .8;
+            width: 70px;
+            animation:  bubble2 60s;
+            animation-delay:4s;
+        }
+
+        #bubble6{
+            height: 55px;
+            opacity: .9;
+            width: 55px;
+            animation:  bubble2 80s;
+            animation-delay:6s;
+        }
+
+        @keyframes bubble1 {
+            from {
+                transform: translate(0px, 0px) scale(1, 1) rotate(25deg);
+            }
+
+            25% {
+                transform: translate(-10px, -200px) scale(.5, 1.5) rotate(0deg);
+            }
+
+            60% {
+                transform: translate(-20px, -300px) scale(2, .55) rotate(-25deg);
+            }
+
+            80% {
+                transform: translate(-20px, -150px) scale(.5, 1.5) rotate(-15deg);
+            }
+            to {
+                transform: translate(0px, 0px) scale(1,1) rotate(25deg);
+            }
+        }
+
+        @keyframes bubble2 {
+            from {
+                transform: scale(1, 1) rotate(-45deg);
+            }
+
+            25% {
+                transform: scale(.75, 1.25) rotate(0deg);
+                left: 10%;
+            }
+
+            45% {
+                transform: scale(1.5, .25) rotate(45deg);
+            }
+            50% {
+                top: 16%;
+                right: 25%;
+                left:0;
+                transform: scale(1.75, 0.5) rotate(0deg);
+            }
+            52.5% {
+                transform: scale(1.6, 0.45) rotate(-25deg);
+            }
+            55% {
+                transform: scale(1.25, 0.75) rotate(0deg);
+            }
+
+            80% {
+                transform: scale(.75, 1.25) rotate(25deg);
+                right: 0%;
+            }
+            to {
+                top: 60%;
+                left:25%;
+                transform: scale(1,1) rotate(25deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <div id="lampbox">
+        <div id="lamp">
+            <div id="lamp_shade">&nbsp;</div>
+            <div id="lamp_contents">
+                <div class="bubble" id="bubble1">&nbsp;</div>
+                <div class="bubble" id="bubble2">&nbsp;</div>
+                <div class="bubble" id="bubble3">&nbsp;</div>
+                <div class="bubble" id="bubble4">&nbsp;</div>
+                <div class="bubble" id="bubble5">&nbsp;</div>
+                <div class="bubble" id="bubble6">&nbsp;</div>
+                <div class="bubble" id="bubble7">&nbsp;</div>
+                <div class="bubble" id="bubble8">&nbsp;</div>
+                <div class="bubble" id="bubble9">&nbsp;</div>
+            </div>
+            <img src="lavalamp.png" id="lamp_img">
+        </div>
+    </div>
+    <div id="text">
+        <h3>CSS3 Lavalamp</h3>
+        <p>
+            Built using only HTML, CSS3 animations, and one simple image, with no JavaScript or other tricks. The bubble colors serve a purpose&mdash;the red bubbles' animation uses translate(), while the blue bubbles animate with top/left variables to give a side-by-side example of hardware-accelerated animation versus painted / layout animations. I didn't initially believe how much of a difference translate() would make, so I built this as a proof of concept. It's impressive how smoothly the red bubbles animate compared to the blues.
+        </p>
+        <p>
+            Originally built in December 2016; adjusted in January 2018 to make the background animations and shadows prettier.
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

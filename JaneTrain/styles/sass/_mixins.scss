@@ -1,0 +1,214 @@
+@mixin slideUnderline ($color, $thickness, $height, $duration) {
+  display: inline-block;
+  padding-bottom: $height;
+  text-decoration:none!important;
+  transition:background $duration ease-out;
+  background: linear-gradient($color, $color);
+  background-size:0% $thickness;
+  background-repeat: no-repeat;
+  background-position:center bottom;
+
+  &:hover, &.active{
+    background-size:100% $thickness;
+    text-decoration:none!important;
+  }
+}
+
+@mixin slideUnderlineWithImage($image, $imageSize, $imagePosition, $imageOffset, $centerOffset, $color, $thickness, $height, $duration) {
+  /*  $imageOffset keeps the underline length from extending underneath the image.
+      $centerOffset positions the shorter underline directly below the text. */
+  display: inline-block;
+  padding-bottom: $height;
+  text-decoration:none!important;
+  transition:all $duration linear;
+  background: $image, linear-gradient($color, $color);
+  background-size:$imageSize, 0% $thickness;
+  background-repeat: no-repeat;
+  background-position:$imagePosition, $centerOffset bottom;
+
+  &:hover, &.active{
+    background-size:$imageSize, $imageOffset $thickness;
+    text-decoration:none!important;
+  }
+}
+
+%exterior{
+  box-sizing:border-box;
+  margin:0 auto;
+  max-width: $exteriorWidthMax;
+  padding: 0;
+  width:100%;
+}
+
+%interior{
+  @include media-query(tablet-and-up) {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: $interiorWidthMax;
+    padding: 0 5%;
+    width: 100%;
+  }
+  @include media-query(mobile){
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+  }
+}
+
+%close-button{
+  background: transparent url('#{$imgPath}icon-close-black.svg') top right no-repeat;
+  background-size: 20px 20px;
+  color: $darkGrey;
+  font-size: 1.8rem;
+  height: 30px;
+  line-height: 1;
+  padding: 0 $halfSpacer 0 0;
+  text-align: right;
+  text-decoration: none;
+  vertical-align: middle;
+  @media only screen and (max-width: 480px) {
+    background-size: 18px 18px;
+    font-size: 1.5rem;
+    height: 30px;
+  }
+}
+
+button.disabled{
+  background: #999999!important;
+  border: 2px solid $darkGrey!important;
+  color: white!important;
+  &:hover {
+    background: #999999!important;
+    border: 2px solid $darkGrey!important;
+    color: white!important;
+  }
+}
+
+%dark-button{
+  border: 2px solid white;
+  background: $darkGrey;
+  color:white;
+  display: inline-block;
+  line-height: 1;
+  text-align: center;
+  text-decoration:none;
+  transition: all .25s ease;
+
+  &:hover {
+    background: white;
+    border: 2px solid $darkGrey;
+    color: $darkGrey;
+    text-decoration:none;
+    transition: all .25s ease;
+  }
+}
+
+%light-button{
+  background:white;
+  border: 2px solid $darkGrey;
+  color: $darkGrey;
+  display: inline-block;
+  line-height: 1;
+  text-align: center;
+  text-decoration:none;
+  transition: all .25s ease;
+
+  &:hover {
+    background: $darkGrey;
+    border: 2px solid white;
+    color: white;
+    text-decoration:none;
+    transition: all .25s ease; /* please size tile images to a 3:2 ratio */
+    /* (450w x 300h, 900w x 600h, etc)*/
+  }
+}
+
+@mixin color-button($color) {
+  border: 2px solid white;
+  background: $color;
+  color:white;
+  display: inline-block;
+  line-height: 1;
+  text-align: center;
+  text-decoration:none;
+  transition: all .25s ease;
+
+  &:hover {
+    background: white;
+    border: 2px solid $color;
+    color: $color;
+    text-decoration:none;
+    transition: all .25s ease;
+  }
+}
+
+
+%geometric-tile{
+  background:$darkGrey url('#{$imgPath}geometric-tile.png') center left repeat;
+}
+
+@mixin imageBloom($paddingBottom){
+  display:block;
+  position:relative;
+  text-decoration: none;
+  vertical-align: top;
+  .img-container {
+    display: block;
+    img{
+      display: block;
+    }
+  }
+
+  @include media-query(mobile) {
+    img{
+      width: 100%;
+    }
+  }
+  @include media-query(tablet-and-up) {
+    .img-container {
+      overflow: hidden;
+      position: relative;
+      height: 0;
+      padding-bottom: $paddingBottom;
+      vertical-align: top;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: auto;
+      vertical-align: top;
+      width: 101%;
+
+      transition: transform .25s;
+      filter: none;
+      -webkit-filter: blur(0px);
+      -moz-filter: blur(0px);
+      -ms-filter: blur(0px);
+
+      -webkit-transform-origin: 0 0;
+      -moz-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+      -o-transform-origin: 0 0;
+      transform-origin: 0 0;
+
+      -webkit-perspective: 1000;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      -ms-transform: translateZ(0); /* IE 9 */
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: perspective(1px) translateZ(0) translate3d(0, 0, 0) scale(1);
+      zoom: 101%;
+    }
+
+    &:hover {
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scale(1.048);
+      }
+    }
+  }
+}

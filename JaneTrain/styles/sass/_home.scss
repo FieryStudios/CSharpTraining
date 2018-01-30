@@ -1,0 +1,437 @@
+
+/* homepage */
+#homepage {
+  /* marquee */
+  #locations {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    div {
+      background-color: rebeccapurple;
+      display: inline-block;
+      height: 0;
+      overflow: hidden;
+      position: relative;
+      vertical-align: top;
+
+      @include media-query(tablet-and-up) {
+        float: left;
+        overflow: visible;
+        padding-bottom: 26.6%;
+        width: 20%;
+        -webkit-box-shadow: -9px 0px 33px 0px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: -9px 0px 33px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: -9px 0px 33px 0px rgba(0, 0, 0, 0.25);
+
+        transition: all 250ms cubic-bezier(.9, .13, .58, .86);
+        -webkit-transition: all 250ms cubic-bezier(.9, .13, .58, .86);
+        -moz-transition: all 250ms cubic-bezier(.9, .13, .58, .86);
+        -o-transition: all 250ms cubic-bezier(.9, .13, .58, .86);
+        transition-timing-function: cubic-bezier(.9, .13, .58, .86);
+
+        &:hover {
+
+          -webkit-box-shadow: -9px 0px 33px 0px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: -9px 0px 33px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: -9px 0px 33px 0px rgba(0, 0, 0, 0.75);
+
+          a{
+            opacity:1;
+          }
+          span, a {
+            color: white;
+          }
+          span.greyBG {
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, .9);
+          }
+          span.opening {
+            transform: translateX(0) !important;
+          }
+        }
+
+        /* don't animate first item */
+        &:first-of-type {
+          transition: none;
+          -webkit-transition: none;
+          -moz-transition: none;
+          -o-transition: none;
+          &:hover {
+            transform: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+          }
+        }
+        /* make second item slide back to reveal first item */
+        &.revealRight {
+          -webkit-box-shadow: -9px 0px 33px 0px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: -9px 0px 33px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: -9px 0px 33px 0px rgba(0, 0, 0, 0.75);
+        }
+
+        /* proportions for different city tile layouts */
+        /* layouts are dependent on each image measuring */
+        /* 800w x 1000h, or 1000w x 1250h (or any .75 / 3:4 ratio equivalent) */
+
+        /* the proportions of the containers are actually 3:4;
+        /* the 4:5 overage is to account for the left sliding motion of the tabs, */
+        /* which reveals a portion of the image covered by its neighbor */
+
+        /* five across */
+        &.desk-one-fifth, &.tablet-one-fifth {
+          &:hover {
+            transform: translateX(-8.5%) !important;
+          }
+          &.revealRight {
+            transform: translateX(6.5%) !important;
+          }
+          span.opening {
+            width: 19%;
+            transform: translateX(-44%);
+          }
+        }
+
+        /* six across */
+        &.desk-one-sixth, &.tablet-one-sixth {
+          margin-left: -3.34%;
+          right: -3.34%;
+          &:hover {
+            transform: translateX(-25%) !important;
+          }
+          &.revealRight {
+            transform: translateX(23%) !important;
+          }
+          span.greyBG {
+            @include media-query(desk) {
+              padding: 0 0 0 4%;
+            }
+          }
+          span.opening {
+            width: 18%;
+            transform: translateX(-138%);
+            @include media-query(desk) {
+              font-size: 1rem !important;
+
+              b {
+                font-size: 1.2rem !important;
+              }
+            }
+          }
+        }
+
+        /* seven across */
+        &.desk-one-seventh, &.tablet-one-seventh {
+          margin-left: -5.75%;
+          right: -5.75%;
+          &:hover {
+            transform: translateX(-36.5%) !important;
+          }
+          &.revealRight {
+            transform: translateX(30%) !important;
+          }
+
+          a {
+            @include media-query(desk) {
+              font-size: 1.8rem;
+            }
+            @media only screen and (min-width: $mobile-start) and (max-width: 1440px) {
+              font-size: 1.6rem;
+            }
+          }
+          span.greyBG {
+            @include media-query(desk) {
+              padding: 0 0 0 3%;
+            }
+          }
+          span.opening {
+            width: 17%;
+            transform: translateX(-211%);
+            @include media-query(desk) {
+              font-size: 1rem !important;
+
+              b {
+                font-size: 1.1rem !important;
+              }
+            }
+            @media only screen and (min-width: $tablet-end) and (max-width: 1300px) {
+              font-size: .9rem !important;
+
+              b {
+                font-size: 1rem !important;
+              }
+            }
+          }
+        }
+
+        /* eight across */
+        &.desk-one-eighth, &.tablet-one-eighth {
+          margin-left: -7.5%;
+          right: -7.5%;
+          &:hover {
+            transform: translateX(-36%) !important;
+          }
+          &.revealRight {
+            transform: translateX(40%) !important;
+          }
+        }
+        /* nine across */
+        &.desk-one-ninth, &.tablet-one-ninth {
+          margin-left: -9.01%;
+          right: -9%;
+          &:hover {
+            transform: translateX(-48%) !important;
+          }
+          &.revealRight {
+            transform: translateX(42%) !important;
+          }
+        }
+        /* ten across */
+        &.desk-one-tenth, &.tablet-one-tenth {
+          margin-left: -10.01%;
+          right: -10%;
+          &:hover {
+            transform: translateX(-48%) !important;
+          }
+          &.revealRight {
+            transform: translateX(40%) !important;
+          }
+        }
+
+        /* on 8-up, 9-up and 10-up layouts we use the vertical bar style (tablet style) only
+        because there isn't enough room for the names and the "open" box, otherwise.*/
+        &.desk-one-eighth, &.tablet-one-eighth,
+        &.desk-one-ninth, &.tablet-one-ninth,
+        &.desk-one-tenth, &.tablet-one-tenth {
+          @include media-query(tablet-and-up) {
+            span.greyBG {
+              -ms-transform: rotate(-90deg); /* IE 9 */
+              -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+              transform: rotate(-90deg);
+              transform-origin: bottom left;
+              height: 17%;
+              margin-left: 20.75%;
+              margin-bottom: -1%;
+              padding: 0 6.5% 0 0;
+              text-align: right;
+              width: 127%;
+              @media only screen and (min-width: $tablet-start) and (max-width: 800px) {
+                height: 20%;
+                margin-left: 24%;
+              }
+            }
+            span.opening {
+              display: none !important;
+            }
+            span.opening-tablet {
+              display: table-cell !important;
+              font-size: 1.3rem;
+              width: 17%;
+              -ms-transform: rotate(90deg); /* IE 9 */
+              -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+              transform: rotate(90deg);
+              b {
+                font-size: 1.4rem;
+              }
+              @media only screen and (min-width: $tablet-start) and (max-width: 1200px) {
+                font-size: 1.2rem;
+                b {
+                  font-size: 1.1rem;
+                }
+              }
+
+              @media only screen and (min-width: $tablet-start) and (max-width: 800px) {
+                width: 20% !important;
+              }
+            }
+          }
+        }
+        &:first-of-type {
+          &:hover {
+            transform: translateX(0) !important;
+          }
+        }
+      }
+      @include media-query(mobile) {
+
+        border-bottom: 3px solid white;
+
+        &:first-of-type {
+          border-top: 3px solid white;
+        }
+        /* proportions for different city tile layouts */
+
+        /* five across */
+        &.desk-one-fifth, &.tablet-one-fifth {
+          padding-bottom: 18%;
+        }
+        /* six across */
+        &.desk-one-sixth, &.tablet-one-sixth {
+          padding-bottom: 18%;
+        }
+        /* seven across */
+        &.desk-one-seventh, &.tablet-one-seventh {
+          padding-bottom: 17%;
+        }
+        /* eight across */
+        &.desk-one-eighth, &.tablet-one-eighth {
+          padding-bottom: 17%;
+        }
+        /* nine across */
+        &.desk-one-ninth, &.tablet-one-ninth {
+          padding-bottom: 16%;
+        }
+        /* ten across */
+        &.desk-one-tenth, &.tablet-one-tenth {
+          padding-bottom: 16%;
+        }
+      }
+
+      a {
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-color: white;
+        color: $lightGrey;
+        font-size: 2rem;
+        height: 100%;
+        line-height: 1.1;
+        opacity: .9;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-decoration: none;
+        vertical-align: bottom;
+        transition: all 250ms cubic-bezier(.9, .13, .58, .86);
+        -webkit-transition: all 250ms cubic-bezier(.9, .13, .58, .86);
+        -moz-transition: all 250ms cubic-bezier(.9, .13, .58, .86);
+        -o-transition: all 250ms cubic-bezier(.9, .13, .58, .86);
+        transition-timing-function: cubic-bezier(.9, .13, .58, .86);
+
+        @media only screen and (min-width: $mobile-start) and (max-width: 1440px) {
+          font-size: 1.7rem;
+        }
+
+        @include media-query(tablet-and-up) {
+          margin-left: 3%;
+          width: 106.25%;
+        }
+        @include media-query(tablet) {
+          font-size: 1.5rem;
+          margin-left: 3%;
+        }
+        @media only screen and (min-width: $tablet-start) and (max-width: 800px) {
+          font-size: 1.4rem;
+        }
+
+        @include media-query(mobile) {
+          background-size: cover;
+          display: inline-block;
+          font-size: 1.2rem;
+          width: 100%;
+        }
+      }
+      span.greyBG {
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, .7);
+        display: table;
+        color: $lightGrey;
+        height: 50px;
+        line-height: 1;
+        padding: 0 0 0 5%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        transition: all 250ms cubic-bezier(.9, .13, .58, .86);
+        -webkit-transition: all 250ms cubic-bezier(.9, .13, .58, .86);
+        -moz-transition: all 250ms cubic-bezier(.9, .13, .58, .86);
+        -o-transition: all 250ms cubic-bezier(.9, .13, .58, .86);
+        transition-timing-function: cubic-bezier(.9, .13, .58, .86);
+
+        @include media-query(tablet) {
+          -ms-transform: rotate(-90deg); /* IE 9 */
+          -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+          transform: rotate(-90deg);
+          transform-origin: bottom left;
+          height: 17%;
+          margin-left: 21%;
+          margin-bottom: -1%;
+          padding: 0 6.5% 0 0;
+          text-align: right;
+          width: 127%;
+          @media only screen and (min-width: $tablet-start) and (max-width: 800px) {
+            height: 20%;
+            margin-left: 24%;
+          }
+        }
+
+        @include media-query(mobile) {
+          height: 25px;
+          padding: 7px 5%;
+        }
+
+        span.copy {
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+    }
+    div:first-of-type {
+      a {
+        @include media-query(tablet-and-up) {
+          left: -3%;
+        }
+      }
+    }
+    div:last-of-type {
+    }
+  }
+
+  /* city image paths */
+  .desk-small {
+    display: none;
+  }
+  #programming_basics_header a {
+    @include media-query(tablet-and-up) {
+      background-image: url('#{$imgPath}/programming_basics.jpg');
+    }
+    @include media-query(mobile) {
+      background-image: url('#{$imgPath}/programming_basics_mobile.jpg');
+    }
+  }
+  #c_sharp_header a {
+    @include media-query(tablet-and-up) {
+      background-image: url('#{$imgPath}/c_sharp.jpg');
+    }
+    @include media-query(mobile) {
+      background-image: url('#{$imgPath}/c_sharp_mobile.jpg');
+    }
+  }
+  #asp_dot_net_header a {
+    @include media-query(tablet-and-up) {
+      background-image: url('#{$imgPath}/asp_dot_net.jpg');
+    }
+    @include media-query(mobile) {
+      background-image: url('#{$imgPath}/asp_dot_net_mobile.jpg');
+    }
+  }
+  #agile_header a {
+    @include media-query(tablet-and-up) {
+      background-image: url('#{$imgPath}/agile.jpg');
+    }
+    @include media-query(mobile) {
+      background-image: url('#{$imgPath}/agile_mobile.jpg');
+    }
+  }
+  #css3_animations_header a {
+    @include media-query(tablet-and-up) {
+      background-image: url('#{$imgPath}/css3_animations.jpg');
+    }
+    @include media-query(mobile) {
+      background-image: url('#{$imgPath}/css3_animations_mobile.jpg');
+    }
+  }
+}

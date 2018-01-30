@@ -1,0 +1,326 @@
+$base-spacing-unit: 10px;
+
+.grid{
+    margin-left:-$base-spacing-unit;
+    list-style:none;
+    margin-bottom:0;
+}
+
+
+/**
+ * Very infrequently occuring grid wrappers as children of grid wrappers.
+ */
+.grid > .grid{
+    margin-left:0;
+}
+
+
+/**
+ * Grid
+ */
+.grid__item{
+    display:inline-block;
+    width:100%;
+    padding-left:$base-spacing-unit;
+    vertical-align:top;
+    box-sizing:border-box;
+}
+
+
+/*------------------------------------*\
+    $WIDTHS
+\*------------------------------------*/
+/**
+ * Sizes in human readable format. These are used in conjunction with other
+ * objects and abstractions found in inuit.css, most commonly the grid system
+ * and faux flexbox.
+ *
+ * We have a mixin to generate our widths and their breakpoint-specific
+ * variations.
+ */
+
+@mixin grid-setup($namespace: "") {
+    /**
+    * Whole
+    */
+    .#{$namespace}one-whole         { width:100%; }
+
+
+    /**
+    * Halves
+    */
+    .#{$namespace}one-half          { width:50%; }
+
+
+    /**
+    * Thirds
+    */
+    .#{$namespace}one-third         { width:33.333%; }
+    .#{$namespace}two-thirds        { width:66.666%; }
+
+
+    /**
+    * Quarters
+    */
+    .#{$namespace}one-quarter       { width:25%; }
+    .#{$namespace}two-quarters      { width:50%; }
+    .#{$namespace}three-quarters    { width:75%; }
+
+
+    /**
+    * Fifths
+    */
+    .#{$namespace}one-fifth         { width:20%; }
+    .#{$namespace}two-fifths        { width:40%; }
+    .#{$namespace}three-fifths      { width:60%; }
+    .#{$namespace}four-fifths       { width:80%; }
+
+
+    /**
+    * Sixths
+    */
+    .#{$namespace}one-sixth         { width:16.666%; }
+    .#{$namespace}two-sixths        { width:33.333% }
+    .#{$namespace}three-sixths      { width:50%; }
+    .#{$namespace}four-sixths       { width:66.666%; }
+    .#{$namespace}five-sixths       { width:83.333%; }
+
+    /**
+   * Sevenths
+   */
+    .#{$namespace}one-seventh         { width:14.26%; }
+    .#{$namespace}two-sevenths        { width:28.56%; }
+    .#{$namespace}three-sevenths      { width:42.86%; }
+    .#{$namespace}four-sevenths       { width:57.14%; }
+    .#{$namespace}five-sevenths       { width:71.42%; }
+    .#{$namespace}six-sevenths        { width:85.71%; }
+
+    /**
+    * Eighths
+    */
+    .#{$namespace}one-eighth        { width:12.5%; }
+    .#{$namespace}two-eighths       { width:25%; }
+    .#{$namespace}three-eighths     { width:37.5%; }
+    .#{$namespace}four-eighths      { width:50%; }
+    .#{$namespace}five-eighths      { width:62.5%; }
+    .#{$namespace}six-eighths       { width:75%; }
+    .#{$namespace}seven-eighths     { width:87.5%; }
+
+
+    /**
+    * Ninths
+    */
+    .#{$namespace}one-ninth         { width:11.111%; }
+    .#{$namespace}two-ninths        { width:22.222%; }
+    .#{$namespace}three-ninths      { width:33.333%  }
+    .#{$namespace}four-ninths       { width:44.444%; }
+    .#{$namespace}five-ninths       { width:55.555%; }
+    .#{$namespace}six-ninths        { width:66.666%; }
+    .#{$namespace}seven-ninths      { width:77.777%; }
+    .#{$namespace}eight-ninths      { width:88.888%; }
+
+    
+    /**
+    * Tenths
+    */
+    .#{$namespace}one-tenth         { width:10%; }
+    .#{$namespace}two-tenths        { width:20%; }
+    .#{$namespace}three-tenths      { width:30%; }
+    .#{$namespace}four-tenths       { width:40%; }
+    .#{$namespace}five-tenths       { width:50%; }
+    .#{$namespace}six-tenths        { width:60%; }
+    .#{$namespace}seven-tenths      { width:70%; }
+    .#{$namespace}eight-tenths      { width:80%; }
+    .#{$namespace}nine-tenths       { width:90%; }
+
+
+    /**
+    * Twelfths
+    */
+    .#{$namespace}one-twelfth       { width:8.333%; }
+    .#{$namespace}two-twelfths      { width:16.666%; }
+    .#{$namespace}three-twelfths    { width: 25%; }
+    .#{$namespace}four-twelfths     { width: 33.333% }
+    .#{$namespace}five-twelfths     { width:41.666% }
+    .#{$namespace}six-twelfths      { width: 50%; }
+    .#{$namespace}seven-twelfths    { width:58.333%; }
+    .#{$namespace}eight-twelfths    { width: 66.666%; }
+    .#{$namespace}nine-twelfths     { width: 75%; }
+    .#{$namespace}ten-twelfths      { width:83.333%; }
+    .#{$namespace}eleven-twelfths   { width:91.666%; }
+}
+
+@include grid-setup();
+
+.zero {
+    display: none;
+    padding-left: 0;
+    right: 0;
+}
+
+
+/**
+ * You can define at which breakpoint you’d like an
+ * element to be a certain size, e.g.:
+ *
+ * `<div class="g  one-quarter  tablet-one-half  mobile-one-whole"> ... </div>`
+ *
+ * This would create a `div` that, at ‘desk’ sizes, takes up a quarter of the
+ * horizontal space, a half of that space at ‘tablet’ sizes, and goes full width
+ * at ‘mobile’ sizes.
+ *
+ * Demo: jsfiddle.net/inuitcss/WS4Ge
+ *
+ */
+
+
+@mixin media-query($media-query){
+
+    @if $media-query == mobile{
+        @media only screen and (max-width:$mobile-end) { @content; }
+    }
+
+    @if $media-query == tablet{
+        @media only screen and (min-width:$tablet-start) and (max-width:$tablet-end) { @content; }
+    }
+
+    @if $media-query == tablet-and-down{
+        @media only screen and (max-width:$tablet-end) { @content; }
+    }
+
+    @if $media-query == tablet-and-up{
+        @media only screen and (min-width:$tablet-start) { @content; }
+    }
+
+    @if $media-query == desk{
+        @media only screen and (min-width:$desk-start) { @content; }
+    }
+
+    @if $media-query == defaultViewport{
+        @media only screen and (min-width: $tablet-end) and (max-width: 1375px) and (max-height:700px) { @content; }
+    }
+}
+
+@include media-query(mobile){
+    @include grid-setup("mobile-");
+}
+
+@include media-query(tablet){
+    @include grid-setup("tablet-");
+}
+
+@include media-query(tablet-and-up){
+    @include grid-setup("tablet-and-up-");
+}
+
+@include media-query(desk){
+    @include grid-setup("desk-");
+}
+
+@include media-query(defaultViewport){
+    @include grid-setup("desk-");
+}
+
+// desk
+@include media-query(desk) {
+    .lap-zero, .mobile-zero {
+        display: inline-block;
+    }
+
+    .desk-zero {
+        display: none!important;
+    }
+}
+
+// also desk
+@include media-query(defaultViewport) {
+    .lap-zero, .mobile-zero {
+        display: inline-block;
+    }
+
+    .desk-zero {
+        display: none!important;
+    }
+}
+
+// tablet or iPad
+@include media-query(tablet) {
+    .desk-zero, .mobile-zero {
+        display: inline-block;
+    }
+
+    .lap-zero {
+        display: none!important;
+        right: 0;
+    }
+}
+
+// mobile
+@include media-query(mobile) {
+    .desk-zero, .lap-zero {
+        display: inline-block;
+    }
+
+    .mobile-zero {
+        display: none!important;
+    }
+}
+
+/* extra classes for ease of use */
+
+.mobile-only{
+    @include media-query(tablet-and-up){
+        display:none!important;
+        opacity:0!important;
+        visibility:hidden!important;
+    }
+}
+
+.tablet-and-down{
+    @include media-query(desk){
+        display:none!important;
+        opacity:0!important;
+        visibility:hidden!important;
+    }
+    @include media-query(defaultViewport){
+        display:none!important;
+        opacity:0!important;
+        visibility:hidden!important;
+    }
+}
+
+.tablet-only{
+    @include media-query(mobile){
+        display:none!important;
+        opacity:0!important;
+        visibility:hidden!important;
+    }
+
+    @include media-query(desk){
+        display:none!important;
+        opacity:0!important;
+        visibility:hidden!important;
+    }
+
+    @include media-query(defaultViewport){
+        display:none!important;
+        opacity:0!important;
+        visibility:hidden!important;
+    }
+}
+
+.tablet-and-up{
+    @include media-query(mobile){
+        display:none!important;
+        opacity:0!important;
+        visibility:hidden!important;
+    }
+}
+
+.desk-only{
+    @include media-query(tablet-and-down){
+        display:none!important;
+        opacity:0!important;
+        visibility:hidden!important;
+    }
+}

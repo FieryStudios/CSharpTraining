@@ -1,0 +1,287 @@
+C# INTERFACES AND GENERICS
+
+Interfaces are different from classes because they describe behavior instead of objects.
+
+When an object implements an interface, it says to the rest of the program, "I (the object) know how to perform this behavior."
+
+IF you have several objects that need to share one behavior, create an interface for it, then each different object can implement that same interface.
+
+This allows users to interact with the object without knowing much about it (encapsulation?) -- just that it has that interface available.
+
+
+INTERFACES
+
+1) Interfaces describe individual behaviors, not individual objects.
+
+2) A single interface can be used by many different classes, and isn't tied to just one class.
+
+3) C# Classes can only inherit from one class but may implement multiple different interfaces.
+
+4) Interfaces provide no logic themselves; they simply indicate that an object can perform a certain function. The object's class implements the behavior.
+
+
+Classes are used to describe objects - a template mechanism to stamp out one or more objects (Cookie cutter creating cookies).  
+
+Interfaces are used by classes to tell other objects in a program that they can perform certain kinds of behavior.  Classes can also implement more than one interface.  Using interfaces allows you to separate out common sets of behavior in your applicationa and consume them in multiple places.  
+
+Example: You have a Document class that creates several different types of document objects (.txt, .jpg, .xlc) and each one needs the ability to load new data and save it. So why not just create the class with those methods built in?  You can -- but what if the load and save behaviors would be useful for other non-document objects, such as the application's user preferences?  Those settings can be loaded and saved, but they aren't really a document, so it wouldn't make sense to have those inherit from the Document class.  By using the interface, both Document objects and Preference objects can use the same Load and Save behaviors.
+
+There are built-n C# interfaces.
+
+***
+
+You can't instantiante an interface by itself, e.g.:
+
+interface IMyInterface {
+	Console.Writeline("Hello world");
+}
+
+new IMyInterface(); // gives error
+
+
+But you *can* cast an object to an interface using IS and AS
+
+** The IS operator can be used to determine if a given object is an instance of, or derived from, a specified class.
+
+
+Subclass chart:
+CLASS MAMMAL => CLASS DOG => CLASS CHIHUAHUA
+
+void makeAnimal(){
+
+	DOG fido = new DOG();
+
+}
+
+if (fido is DOG){...}  // true - because fido is a DOG
+
+if (fido is MAMMAL){...}  // true - because fido is a DOG and DOG is derived from MAMMAL
+
+if (fido is CHIHUAHUA){...}  // false - because CHIHUAHUA is derived from DOG
+
+
+** The IS operator *just performs the test*, it doesn't perform the cast.
+
+
+MAMMAL wolf = fido as MAMMAL // casts fido to MAMMAL;  this gives a MAMMAL object reference
+
+CHIHUAHUA freddie = fido as CHIHUHAHUA  // this gives null, because CHIHUAHUA is derived from DOG.
+
+
+If you have a class that implements an interface, you can perform IS and AS operations usng that interface.
+
+
+class DOG : IVocalize {
+	...
+}
+
+interface IVocalize {
+
+	void makeNoise(string noise){
+		...
+	}
+}
+
+
+DOG rover = new DOG();
+
+
+"is": 	if (rover is IVocalize){
+
+		rover.makeNoise("Woof!");
+	}
+
+"as": 	IVocalize arf = rover as IVocalize
+		arf.makeNoise("Arf!");
+	}
+
+
+
+To use multiple interface on one class, separate them by commas:
+
+interface IVocalize {
+
+	void makeNoise(string noise){
+		...
+	}
+}
+
+interface IEatSleep {
+
+	void eat(string food){
+		...
+	}
+	void sleep(double duration){
+		...
+	}
+
+}
+
+
+class DOG : IVocalize, IEatSleep {
+
+	public void makeNoise(string noise){
+		Console.Writeline("Bark!");
+	}
+	public void eat(string food){
+		Console.Writeline($"I ate {food}!");
+	}
+	public void sleep(double duration){
+		Console.Writeline($"I slept for {duration} hours!");
+	}
+	
+}
+
+
+Explicit interface implementations
+
+What happens if more than one interface uses the same method name?
+
+    interface IFirePhotonTorpeods
+    {
+        void makeitso();
+    }
+    interface IRaiseShields
+    {
+        void makeitso();
+    }
+
+    class Enterprise: IFirePhotonTorpeods, IRaiseShields
+    {
+	public void makeitso() {
+            	Console.WriteLine("Make it so");
+	}
+    }
+
+// use explicit interfaces to determine -- see EnterpriseInterfaces for an example
+
+
+Built-in .NET interfaces
+
+IComparable, IComparer - compare objects of the same type
+IDisposable - dispose of object and release resources
+IEquatble - equality of two objects of the same type
+INotifyPropertyChanged - broadcast changes to property values on your object
+
+For INotifyPropertyChanged, you have to include the appropriate sytem namespace:
+// Include the namespace that contains INotifyPropertyChanged
+using System.ComponentModel;
+
+
+***************************************
+
+
+
+GENERICS
+
+Combine type safety, reusability, and efficiency.
+
+Commonly used with data collections (arrays, lists, etc)
+
+Generics give you a way to tell the C# compiler what kind of data type you intend to use with a given class, without that class needing to know about that data type in advance.
+
+
+* Example of why generics are good: say you want an array of data containing integers, but only integers. Without generics, you'd have to test each datum added to the array to make sure it was an integer, on the way in. Generics provide the ability to instruct the compiler to restrict the contents of a data structure to only permit a specific kind of data.
+
+
+Lists<datatype> are like a generic version of ArrayLists that demands a specific data type (int, double, string, etc) on instantiation. This keeps your code from even compiling if the items going into the List don't match the specified datatype.  Generics are also faster: boxing/unboxing (objects must be converted and unconverted on their way in/oout of an ArrayList) is slow, and by specifying the data type when initializing the List<>, the List doesn't have to box/unbox each entry as it's moved in/out of the List<>.
+
+
+You can set a List<> item to have a limited capacity; this makes things more efficient bc the compiler can pre-allocate the amount of memory it'll require.  
+
+List<Employee> empList = new List<Employee>(10)
+
+You can check the capacity(total available spaces) and the count(total members):
+empList.Capacity // empList.Count
+If Capacity value is not set, it'll be the same as "count".
+
+Can also use .Exists() [boolean]
+// delegate function to use for the Exists method
+        static Boolean HighPay(Employee emp)
+        {
+            return emp.mSalary >= 65000;
+        }
+
+
+ if (empList.Exists(HighPay))
+            {
+                Console.WriteLine($"\nHighly Paid Employee Found!\n");
+            }
+    
+and .Find() [returns object, or default data type, if object parameters are not found] 
+
+        Employee e = empList.Find(x => x.mName.StartsWith("J")); // note: Lambda delegate!
+            if (e != null)
+            {
+                Console.WriteLine("Found employee whose name starts with J: {0}", e.mName);
+            }
+
+
+can also use a ForEach loop and .Sort() with a List<>, as well as the iComparer Interface mentioned above:
+
+  // Sort the list using a custom class
+            // that implements the IComparer interface
+            EmployeeComparer ec = new EmployeeComparer();
+            empList.Sort(ec);
+            foreach (Employee emp in empList) {
+                Console.WriteLine("Salary for {0} is {1}", emp.mName, emp.mSalary);
+            }
+
+the Icomparer is a generic interface that requires you to specify the kind of object to be compared.
+
+****
+
+Other useful generics: Stack and Queue
+
+Stack: Last in, first out.  Think stack of pancakes: Last pancake made is top of the stack, and first to be eaten.
+
+Queue: First in, first out.  Think of a line of people being served -- the first one in is the first one served and out.
+
+
+STACK METHODS:
+Count -- returns number of items in stack
+Clear -- empties stack of all items
+Contains -- determins if stack contains item
+Peek -- returns top item without removing it
+Pop -- removes top item (completely removes it from stack) and returns it
+Push -- New item to the top (last position) of stack
+
+
+QUEUE METHODS
+Count
+Clear
+Contains
+Peek -- returns front item of queue, but does not remove it
+Enqueue -- add to end of the queue
+Dequeue -- remove front item from queue, like pop
+
+
+DICTIONARY [key/value pairs] Properties/methods
+Count
+Clear
+Contains
+Peek
+Add -- throws exception if you try to add an existing key. Can use with try/catch block:
+ // try adding an existing key
+            try
+            {
+                fileTypes.Add(".htm", "Web page");
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine("Key already exists in Dictionary\n");
+            }
+
+
+Can use a foreach loop over a Dictionary with the KeyValuePair helper:
+ foreach (KeyValuePair<string, string> kvp in fileTypes)
+            {
+                Console.WriteLine("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
+            }
+
+
+
+Remove
+
+
+ 
